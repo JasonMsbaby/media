@@ -1,10 +1,11 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<jsp:include page="plugin.jsp" />
 <!DOCTYPE>
 <html>
 <head>
 <title>首页欢迎页</title>
 </head>
-<body>
+<body >
  <div class="admin">
   <div class="line-big">
    <div class="xm3">

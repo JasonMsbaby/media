@@ -16,15 +16,17 @@
     >前台首页</a> <a class="button button-little bg-yellow" href="exit.html">注销登录</a>
    </span>
     <ul class="nav nav-inline admin-nav">
-     <li class="nav1 active" ><a href="" class="icon-home">首页</a>
-     <ul><li class="active"><a href="welcome" target="">欢迎页面</a></li></ul></li>
+     <li class="nav1 active"><a class="icon-home">首页</a>
+      <ul><li class="active" onclick="$('#admin').load('welcome')"><a class="icon-paper-plane-o" 
+       > 欢迎页面</a></li></ul></li>
      <c:forEach items="${list}" var="li">
       <c:if test="${li.aType==0}">
-       <li class="nav1" ><a href="#" class="${li.aIcon}">${li.aName}</a>
+       <li class="nav1"><a href="#" class="${li.aIcon}"> ${li.aName}</a>
         <ul>
          <c:forEach items="${list}" var="li2">
           <c:if test="${li2.aType==li.aId}">
-           <li class="nav2"><a class="${li.aIcon}">${li2.aName}</a></li>
+           <li class="nav2" onclick="$('#admin').load('${li2.aLink}')"><a class="${li2.aIcon}">
+             ${li2.aName}</a></li>
           </c:if>
          </c:forEach>
        </ul></li>
@@ -35,8 +37,10 @@
     <ul class="bread">
      <li><a id="adressOne" href="#" class="icon-external-link-square">首页</a></li>
      <li id="adressTwo" href="#" class="icon-external-link">后台首页</li>
-   </ul></div>
+   </ul></div> 
  </div>
+</div>
+<div id="admin" class="admin">
 </div>
 </body>
 </html>

@@ -7,9 +7,18 @@ import com.jfinal.core.Controller;
 
 public class indexController extends Controller {
 
+	
+	public void welcome(){
+		render("common/welcome.jsp");
+	}
+	
+	public void login(){
+		render("login.jsp");
+	}
 	public void index() {
 		List<Action> action=Action.me.getAll();
-		System.out.println(action);
 		setAttr("list", action);
+		render("index.jsp");
+		
 	}
 }

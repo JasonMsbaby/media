@@ -1,192 +1,192 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <nav>
 	<nav1 aId="nav1" aName="客户管理" aType="0" aRemark="" aAllow=""
-		aLink="" aShow="1" aOrder="1" aIcon="icon-home">
+		aLink="welcome" aShow="1" aOrder="1" aIcon="icon-users">
 		<nav2 aId="nav1_1" aName="客户信息录入" aType="nav1" aRemark="" aAllow=""
-			aLink="" aShow="1" aOrder="1" aIcon="icon-home">
+			aLink="welcome" aShow="1" aOrder="1" aIcon="icon-pencil">
 		</nav2>
 		<nav2 aId="nav1_2" aName="客户档案管理" aType="nav1" aRemark="" aAllow=""
-			aLink="" aShow="1" aOrder="2" aIcon="icon-home">
+			aLink="welcome" aShow="1" aOrder="2" aIcon="icon-hdd-o">
 			<nav3 aId="nav1_2_1" aName="查看详情" aType="nav1_2" aRemark=""
-				aAllow="" aLink="" aShow="0" aOrder="1" aIcon="icon-home">
+				aAllow="" aLink="welcome" aShow="0" aOrder="1" aIcon="icon-navicon (alias)">
 			</nav3>
 			<nav3 aId="nav1_2_2" aName="导出档案" aType="nav1_2" aRemark=""
-				aAllow="" aLink="" aShow="0" aOrder="2" aIcon="icon-home">
+				aAllow="" aLink="welcome" aShow="0" aOrder="2" aIcon="icon-print">
 			</nav3>
 			<nav3 aId="nav1_2_3" aName="编辑" aType="nav1_2" aRemark=""
-				aAllow="" aLink="" aShow="0" aOrder="3" aIcon="icon-home">
+				aAllow="" aLink="welcome" aShow="0" aOrder="3" aIcon="icon-pencil-square-o">
 			</nav3>
 			<nav3 aId="nav1_2_4" aName="删除" aType="nav1_2" aRemark=""
-				aAllow="" aLink="" aShow="0" aOrder="4" aIcon="icon-home">
+				aAllow="" aLink="welcome" aShow="0" aOrder="4" aIcon="icon-trash-o">
 			</nav3>
 		</nav2>
 	</nav1>
 	<nav1 aId="nav2" aName="销售管理" aType="0" aRemark="" aAllow=""
-		aLink="" aShow="1" aOrder="2" aIcon="icon-home">
+		aLink="welcome" aShow="1" aOrder="2" aIcon="icon-shopping-cart">
 		<nav2 aId="nav2_1" aName="销售信息录入" aType="nav2" aRemark="" aAllow=""
-			aLink="" aShow="1" aOrder="1" aIcon="icon-home">
+			aLink="welcome" aShow="1" aOrder="1" aIcon="icon-pencil">
 		</nav2>
 		<nav2 aId="nav2_2" aName="销售信息管理" aType="nav2" aRemark="" aAllow=""
-			aLink="" aShow="1" aOrder="1" aIcon="icon-home">
+			aLink="welcome" aShow="1" aOrder="1" aIcon="icon-hdd-o">
 			<nav3 aId="nav2_2_1" aName="查看详情" aType="nav2_2" aRemark=""
-				aAllow="" aLink="" aShow="0" aOrder="4" aIcon="icon-home">
+				aAllow="" aLink="welcome" aShow="0" aOrder="4" aIcon="icon-navicon (alias)">
 			</nav3>
 			<nav3 aId="nav2_2_2" aName="编辑" aType="nav2_2" aRemark=""
-				aAllow="" aLink="" aShow="0" aOrder="4" aIcon="icon-home">
+				aAllow="" aLink="welcome" aShow="0" aOrder="4" aIcon="icon-pencil-square-o">
 			</nav3>
 			<nav3 aId="nav2_2_3" aName="删除" aType="nav2_2" aRemark=""
-				aAllow="" aLink="" aShow="0" aOrder="4" aIcon="icon-home">
+				aAllow="" aLink="welcome" aShow="0" aOrder="4" aIcon="icon-trash-o">
 			</nav3>
 			<nav3 aId="nav2_2_4" aName="导出记录" aType="nav2_2" aRemark=""
-				aAllow="" aLink="" aShow="0" aOrder="4" aIcon="icon-home">
+				aAllow="" aLink="welcome" aShow="0" aOrder="4" aIcon="icon-print">
 			</nav3>
 		</nav2>
 		<nav2 aId="nav2_3" aName="销售信息统计" aType="nav2" aRemark="" aAllow=""
-			aLink="" aShow="1" aOrder="1" aIcon="icon-home">
+			aLink="welcome" aShow="1" aOrder="1" aIcon="icon-book">
 			<nav3 aId="nav2_3_1" aName="导出报表" aType="nav2_3" aRemark=""
-				aAllow="" aLink="" aShow="0" aOrder="4" aIcon="icon-home">
+				aAllow="" aLink="welcome" aShow="0" aOrder="4" aIcon="icon-print">
 			</nav3>
 		</nav2>
 
 	</nav1>
 	<nav1 aId="nav3" aName="售后管理" aType="0" aRemark="" aAllow=""
-		aLink="" aShow="1" aOrder="3" aIcon="icon-home">
+		aLink="welcome" aShow="1" aOrder="3" aIcon="icon-fax">
 		<nav2 aId="nav3_1" aName="售后信息录入" aType="nav3" aRemark="" aAllow=""
-			aLink="" aShow="1" aOrder="1" aIcon="icon-home">
+			aLink="welcome" aShow="1" aOrder="1" aIcon="icon-pencil">
 		</nav2>
 		<nav2 aId="nav3_2" aName="售后信息查询" aType="nav3" aRemark="" aAllow=""
-			aLink="" aShow="1" aOrder="1" aIcon="icon-home">
+			aLink="welcome" aShow="1" aOrder="1" aIcon="icon-desktop">
 		</nav2>
 		<nav2 aId="nav3_3" aName="售后信息统计" aType="nav3" aRemark="" aAllow=""
-			aLink="" aShow="1" aOrder="1" aIcon="icon-home">
+			aLink="welcome" aShow="1" aOrder="1" aIcon="icon-book">
 		</nav2>
 	</nav1>
-	<nav1 aId="nav4" aName="审批" aType="0" aRemark="" aAllow="" aLink=""
-		aShow="1" aOrder="4" aIcon="icon-home">
+	<nav1 aId="nav4" aName="审批" aType="0" aRemark="" aAllow="" aLink="welcome"
+		aShow="1" aOrder="4" aIcon="icon-shield">
 		<nav2 aId="nav4_1" aName="待审核" aType="nav4" aRemark="" aAllow=""
-			aLink="" aShow="1" aOrder="1" aIcon="icon-home">
+			aLink="welcome" aShow="1" aOrder="1" aIcon="icon-eye">
 		</nav2>
 		<nav2 aId="nav4_1" aName="审核完成" aType="nav4" aRemark="" aAllow=""
-			aLink="" aShow="1" aOrder="1" aIcon="icon-home">
+			aLink="welcome" aShow="1" aOrder="1" aIcon="icon-gavel">
 		</nav2>
 	</nav1>
-	<nav1 aId="nav5" aName="维修备件管理" aType="0" aRemark="" aAllow=""
-		aLink="" aShow="1" aOrder="5" aIcon="icon-home">
+	<nav1 aId="nav5" aName="备件入库出库管理" aType="0" aRemark="" aAllow=""
+		aLink="welcome" aShow="1" aOrder="5" aIcon="icon-truck">
 		<nav2 aId="nav5_1" aName="备件入库" aType="nav5" aRemark="" aAllow=""
-			aLink="" aShow="1" aOrder="1" aIcon="icon-home">
+			aLink="welcome" aShow="1" aOrder="1" aIcon="icon-mail-reply (alias)">
 		</nav2>
 		<nav2 aId="nav5_2" aName="备件出库" aType="nav5" aRemark="" aAllow=""
-			aLink="" aShow="1" aOrder="1" aIcon="icon-home">
+			aLink="welcome" aShow="1" aOrder="1" aIcon="icon-mail-forward (alias)">
 		</nav2>
 		<nav2 aId="nav5_3" aName="备件查询" aType="nav5" aRemark="" aAllow=""
-			aLink="" aShow="1" aOrder="1" aIcon="icon-home">
+			aLink="welcome" aShow="1" aOrder="1" aIcon="icon-desktop">
 		</nav2>
 		<nav2 aId="nav5_4" aName="领取记录" aType="nav5" aRemark="" aAllow=""
-			aLink="" aShow="1" aOrder="1" aIcon="icon-home">
+			aLink="welcome" aShow="1" aOrder="1" aIcon="icon-list-alt">
 		</nav2>
 		<nav2 aId="nav5_5" aName="报废管理" aType="nav5" aRemark="" aAllow=""
-			aLink="" aShow="1" aOrder="1" aIcon="icon-home">
+			aLink="welcome" aShow="1" aOrder="1" aIcon="icon-exclamation-circle">
 			<nav3 aId="nav5_5_1" aName="转为报废" aType="nav5_5" aRemark=""
-				aAllow="" aLink="" aShow="0" aOrder="4" aIcon="icon-home">
+				aAllow="" aLink="welcome" aShow="0" aOrder="4" aIcon="icon-retweet">
 			</nav3>
 			<nav3 aId="nav5_5_2" aName="查看详情" aType="nav5_5" aRemark=""
-				aAllow="" aLink="" aShow="0" aOrder="4" aIcon="icon-home">
+				aAllow="" aLink="welcome" aShow="0" aOrder="4" aIcon="icon-navicon (alias)">
 			</nav3>
 			<nav3 aId="nav5_5_3" aName="查看记录" aType="nav5_5" aRemark=""
-				aAllow="" aLink="" aShow="0" aOrder="4" aIcon="icon-home">
+				aAllow="" aLink="welcome" aShow="0" aOrder="4" aIcon="icon-desktop">
 			</nav3>
 		</nav2>
 	</nav1>
 	<nav1 aId="nav6" aName="内容管理" aType="0" aRemark="" aAllow=""
-		aLink="" aShow="1" aOrder="6" aIcon="icon-home">
+		aLink="welcome" aShow="1" aOrder="6" aIcon="icon-bar-chart-o">
 		<nav2 aId="nav6_1" aName="商品基本信息管理" aType="nav6" aRemark=""
-			aAllow="" aLink="" aShow="1" aOrder="1" aIcon="icon-home">
+			aAllow="" aLink="welcome" aShow="1" aOrder="1" aIcon="icon-cubes">
 			<nav3 aId="nav6_1_1" aName="查看详情" aType="nav6_1" aRemark=""
-				aAllow="" aLink="" aShow="0" aOrder="4" aIcon="icon-home">
+				aAllow="" aLink="welcome" aShow="0" aOrder="4" aIcon="icon-navicon (alias)">
 			</nav3>
 			<nav3 aId="nav6_1_2" aName="新增商品" aType="nav6_1" aRemark=""
-				aAllow="" aLink="" aShow="0" aOrder="4" aIcon="icon-home">
+				aAllow="" aLink="welcome" aShow="0" aOrder="4" aIcon="icon-pencil">
 			</nav3>
 			<nav3 aId="nav6_1_3" aName="编辑" aType="nav6_1" aRemark=""
-				aAllow="" aLink="" aShow="0" aOrder="4" aIcon="icon-home">
+				aAllow="" aLink="welcome" aShow="0" aOrder="4" aIcon="icon-pencil-square-o">
 			</nav3>
 			<nav3 aId="nav6_1_4" aName="删除" aType="nav6_1" aRemark=""
-				aAllow="" aLink="" aShow="0" aOrder="4" aIcon="icon-home">
+				aAllow="" aLink="welcome" aShow="0" aOrder="4" aIcon="icon-trash-o">
 			</nav3>
 		</nav2>
 		<nav2 aId="nav6_2" aName="价目管理" aType="nav6" aRemark="" aAllow=""
-			aLink="" aShow="1" aOrder="1" aIcon="icon-home">
+			aLink="welcome" aShow="1" aOrder="1" aIcon="icon-cny (alias)">
 			<nav3 aId="nav6_2_1" aName="新增价目" aType="nav6_2" aRemark=""
-				aAllow="" aLink="" aShow="0" aOrder="4" aIcon="icon-home">
+				aAllow="" aLink="welcome" aShow="0" aOrder="4" aIcon="icon-pencil">
 			</nav3>
 			<nav3 aId="nav6_2_2" aName="编辑" aType="nav6_2" aRemark=""
-				aAllow="" aLink="" aShow="0" aOrder="4" aIcon="icon-home">
+				aAllow="" aLink="welcome" aShow="0" aOrder="4" aIcon="icon-pencil-square-o">
 			</nav3>
 			<nav3 aId="nav6_2_3" aName="删除" aType="nav6_2" aRemark=""
-				aAllow="" aLink="" aShow="0" aOrder="4" aIcon="icon-home">
+				aAllow="" aLink="welcome" aShow="0" aOrder="4" aIcon="icon-trash-o">
 			</nav3>
 		</nav2>
 		<nav2 aId="nav6_3" aName="维修备件信息管理" aType="nav6" aRemark=""
-			aAllow="" aLink="" aShow="1" aOrder="1" aIcon="icon-home">
+			aAllow="" aLink="welcome" aShow="1" aOrder="1" aIcon="icon-suitcase">
 			<nav3 aId="nav6_3_1" aName="新增备件" aType="nav6_3" aRemark=""
-				aAllow="" aLink="" aShow="0" aOrder="4" aIcon="icon-home">
+				aAllow="" aLink="welcome" aShow="0" aOrder="4" aIcon="icon-pencil">
 			</nav3>
 			<nav3 aId="nav6_3_1" aName="编辑" aType="nav6_3" aRemark=""
-				aAllow="" aLink="" aShow="0" aOrder="4" aIcon="icon-home">
+				aAllow="" aLink="welcome" aShow="0" aOrder="4" aIcon="icon-pencil-square-o">
 			</nav3>
 			<nav3 aId="nav6_3_1" aName="删除" aType="nav6_3" aRemark=""
-				aAllow="" aLink="" aShow="0" aOrder="4" aIcon="icon-home">
+				aAllow="" aLink="welcome" aShow="0" aOrder="4" aIcon="icon-trash-o">
 			</nav3>
 		</nav2>
 	</nav1>
 	<nav1 aId="nav7" aName="系统设置" aType="0" aRemark="" aAllow=""
-		aLink="" aShow="1" aOrder="7" aIcon="icon-home">
+		aLink="welcome" aShow="1" aOrder="7" aIcon="icon-gears (alias)">
 		<nav2 aId="nav7_1" aName="用户管理" aType="nav7" aRemark=""
-			aAllow="" aLink="" aShow="1" aOrder="1" aIcon="icon-home">
+			aAllow="" aLink="welcome" aShow="1" aOrder="1" aIcon="icon-user">
 			<nav3 aId="nav7_1_1" aName="新增用户" aType="nav7_1" aRemark=""
-				aAllow="" aLink="" aShow="0" aOrder="4" aIcon="icon-home">
+				aAllow="" aLink="welcome" aShow="0" aOrder="4" aIcon="icon-pencil">
 			</nav3>
 			<nav3 aId="nav7_1_2" aName="编辑" aType="nav7_1" aRemark=""
-				aAllow="" aLink="" aShow="0" aOrder="4" aIcon="icon-home">
+				aAllow="" aLink="welcome" aShow="0" aOrder="4" aIcon="icon-pencil-square-o">
 			</nav3>
 			<nav3 aId="nav7_1_3" aName="删除" aType="nav7_1" aRemark=""
-				aAllow="" aLink="" aShow="0" aOrder="4" aIcon="icon-home">
+				aAllow="" aLink="welcome" aShow="0" aOrder="4" aIcon="icon-trash-o">
 			</nav3>
 		</nav2>
 		<nav2 aId="nav7_2" aName="角色管理" aType="nav7" aRemark=""
-			aAllow="" aLink="" aShow="1" aOrder="1" aIcon="icon-home">
+			aAllow="" aLink="welcome" aShow="1" aOrder="1" aIcon="icon-tags">
 			<nav3 aId="nav7_2_1" aName="新增角色" aType="nav7_2" aRemark=""
-				aAllow="" aLink="" aShow="0" aOrder="4" aIcon="icon-home">
+				aAllow="" aLink="welcome" aShow="0" aOrder="4" aIcon="icon-pencil">
 			</nav3>
 			<nav3 aId="nav7_2_2" aName="编辑" aType="nav7_2" aRemark=""
-				aAllow="" aLink="" aShow="0" aOrder="4" aIcon="icon-home">
+				aAllow="" aLink="welcome" aShow="0" aOrder="4" aIcon="icon-pencil-square-o">
 			</nav3>
 			<nav3 aId="nav7_2_3" aName="删除" aType="nav7_2" aRemark=""
-				aAllow="" aLink="" aShow="0" aOrder="4" aIcon="icon-home">
+				aAllow="" aLink="welcome" aShow="0" aOrder="4" aIcon="icon-trash-o">
 			</nav3>
 		</nav2>
 		<nav2 aId="nav7_3" aName="权限管理" aType="nav7" aRemark=""
-			aAllow="" aLink="" aShow="1" aOrder="1" aIcon="icon-home">
+			aAllow="" aLink="welcome" aShow="1" aOrder="1" aIcon="icon-unlock-alt">
 			<nav3 aId="nav7_3_1" aName="新增权限" aType="nav7_3" aRemark=""
-				aAllow="" aLink="" aShow="0" aOrder="4" aIcon="icon-home">
+				aAllow="" aLink="welcome" aShow="0" aOrder="4" aIcon="icon-pencil">
 			</nav3>
 			<nav3 aId="nav7_3_2" aName="编辑" aType="nav7_3" aRemark=""
-				aAllow="" aLink="" aShow="0" aOrder="4" aIcon="icon-home">
+				aAllow="" aLink="welcome" aShow="0" aOrder="4" aIcon="icon-pencil-square-o">
 			</nav3>
 			<nav3 aId="nav7_3_3" aName="删除" aType="nav7_3" aRemark=""
-				aAllow="" aLink="" aShow="0" aOrder="4" aIcon="icon-home">
+				aAllow="" aLink="welcome" aShow="0" aOrder="4" aIcon="icon-trash-o">
 			</nav3>
 		</nav2>
 		<nav2 aId="nav7_4" aName="综合变量设置" aType="nav7" aRemark=""
-			aAllow="" aLink="" aShow="1" aOrder="1" aIcon="icon-home">
+			aAllow="" aLink="welcome" aShow="1" aOrder="1" aIcon="icon-cog">
 			<nav3 aId="nav7_4_1" aName="新增变量" aType="nav7_4" aRemark=""
-				aAllow="" aLink="" aShow="0" aOrder="4" aIcon="icon-home">
+				aAllow="" aLink="welcome" aShow="0" aOrder="4" aIcon="icon-pencil">
 			</nav3>
 			<nav3 aId="nav7_4_2" aName="编辑" aType="nav7_4" aRemark=""
-				aAllow="" aLink="" aShow="0" aOrder="4" aIcon="icon-home">
+				aAllow="" aLink="welcome" aShow="0" aOrder="4" aIcon="icon-pencil-square-o">
 			</nav3>
 			<nav3 aId="nav7_4_3" aName="删除" aType="nav7_4" aRemark=""
-				aAllow="" aLink="" aShow="0" aOrder="4" aIcon="icon-home">
+				aAllow="" aLink="welcome" aShow="0" aOrder="4" aIcon="icon-trash-o">
 			</nav3>
 		</nav2>
 	</nav1>
