@@ -13,36 +13,36 @@
         <div class="xs6 xm4 xs3-move xm4-move">
             <br /><br />
             <div class="media media-y">
-                <a href="http://www.pintuer.com" target="_blank"><img src="images/logo.png" class="radius" alt="后台管理系统" /></a>
+                <a href="index" target="_blank">
+                <img style="height: 70px;" src="Images/Resources/midea.png" class="radius" alt="后台管理系统" /></a>
             </div>
             <br /><br />
-            <form action="index.html" method="post">
+            <form action="login_submit" method="post">
             <div class="panel">
-                <div class="panel-head"><strong>登录拼图后台管理系统</strong></div>
+                <div class="panel-head"><strong>美的售后维护管理系统</strong><strong style="color:red;margin-left: 30px;">${info}</strong></div>
                 <div class="panel-body" style="padding:30px;">
                     <div class="form-group">
                         <div class="field field-icon-right">
-                            <input type="text" class="input" name="admin" placeholder="登录账号" data-validate="required:请填写账号,length#>=5:账号长度不符合要求" />
+                            <input type="text" class="input" name="user.uName" placeholder="用户名" data-validate="required:请填写账号" />
                             <span class="icon icon-user"></span>
                         </div>
                     </div>
                     <div class="form-group">
                         <div class="field field-icon-right">
-                            <input type="password" class="input" name="password" placeholder="登录密码" data-validate="required:请填写密码,length#>=8:密码长度不符合要求" />
+                            <input type="password" class="input" name="user.uPwd" placeholder="登录密码" data-validate="required:请填写密码" />
                             <span class="icon icon-key"></span>
                         </div>
                     </div>
                     <div class="form-group">
                         <div class="field">
-                            <input type="text" class="input" name="passcode" placeholder="填写右侧的验证码" data-validate="required:请填写右侧的验证码" />
-                            <img src="images/passcode.jpg" width="80" height="32" class="passcode" />
+                            <input type="text" class="input" name="code1" placeholder="填写右侧的验证码" data-validate="required:请填写右侧的验证码" />
+                            <img onclick="this.src='getCode'" src="getCode" width="80" height="32" class="passcode" />
                         </div>
                     </div>
                 </div>
                 <div class="panel-foot text-center"><button class="button button-block bg-main text-big">立即登录后台</button></div>
             </div>
             </form>
-            <div class="text-right text-small text-gray padding-top">基于<a class="text-gray" target="_blank" href="http://www.pintuer.com">拼图前端框架</a>构建</div>
         </div>
     </div>
 </div>

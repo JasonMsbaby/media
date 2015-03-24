@@ -10,7 +10,7 @@
   <div class="line-big">
    <div class="xm3">
     <div class="panel border-back">
-     <div class="panel-body text-center"><img src="images/face.jpg" width="120"
+     <div class="panel-body text-center"><img src="Plugin/pintuer/images/face.jpg" width="120"
       class="radius-circle"
      /><br /> admin</div>
      <div class="panel-foot bg-back border-back">您好，admin，这是您第100次登录，上次登录为2014-10-1。</div>
@@ -71,5 +71,7 @@
   </div>
  </div>
 </div>
+
 </body>
+
 </html>

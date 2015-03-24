@@ -1,5 +1,7 @@
 package com.dz.media.common;
 
+import com.dz.media.controller.IndexController;
+import com.dz.media.controller.SystemController;
 import com.dz.media.model.Action;
 import com.dz.media.model.Goods;
 import com.dz.media.model.Guest;
@@ -44,7 +46,8 @@ public class Config extends JFinalConfig {
 
 	@Override
 	public void configRoute(Routes me) {
-		me.add(new com.dz.media.common.Routes());
+		me.add("/",IndexController.class,"/WEB-INF/view");
+		me.add("sys",SystemController.class,"/WEB-INF/view/system");
 	}
 
 	@Override
@@ -78,7 +81,7 @@ public class Config extends JFinalConfig {
 	 */
 	@Override
 	public void configInterceptor(Interceptors me) {
-		me.add(new myInterceptor());
+		me.add(new MyInterceptor());
 	}
 
 	/**
