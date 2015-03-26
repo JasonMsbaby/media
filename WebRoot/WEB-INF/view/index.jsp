@@ -6,9 +6,9 @@
 <head>
 </head>
 <body>
- <div class="lefter"><br> <label
-  style="font-size: large; font-weight: 800; font-family: '微软雅黑'"
- >美的售后维护管理系统</label></div>
+ <div class="lefter"><img class="img-border radius-circle"
+  style="width: 180px; height: 75px; margin-top: 5px;" alt="" src="Images/Resources/midea.png"
+ ></div>
  <div class="righter nav-navicon" id="admin-nav">
   <div class="mainer">
    <div class="admin-navbar"><span class="float-right"> <a
@@ -38,7 +38,9 @@
     <ul class="bread">
      <li><a id="adressOne" href="index" class="icon-external-link-square">首页</a></li>
      <li id="adressTwo" href="#" class="icon-external-link">后台首页</li>
-   </ul></div>
+   </ul>
+    <!-- <button class="button win-back icon-arrow-left">后退</button>
+    <button class="button win-forward">前进 <span class="icon-arrow-right"></span></button></div> -->
  </div>
 </div>
  <script type="text/javascript">
@@ -46,6 +48,9 @@
 	    $('#admin').load('welcome');
 	});
     </script>
- <div id="admin" class="admin"></div>
+ <div id="admin" class="admin">
+ 
+ 
+ </div>
 </body>
 </html>

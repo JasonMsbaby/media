@@ -184,6 +184,10 @@ $(function(){
 				}
 		}
 	};
+	
+	/**
+	 * form校验机制
+	 */
 	$('form').submit(function(){
 		$(this).find('input[data-validate],textarea[data-validate],select[data-validate]').trigger("blur");
 		$(this).find('input[placeholder],textarea[placeholder]').each(function(){$hideplaceholder($(this));});
@@ -191,8 +195,13 @@ $(function(){
 		if(numError){
 			$(this).find('.check-error').first().find('input[data-validate],textarea[data-validate],select[data-validate]').first().focus().select();
 			return false;
+		}else{
+		    alert($(this).attr("action"));
+		   //$('#admin').load('sys/userManger_add_submit');
 		}
 	});
+	
+	
 	$('.form-reset').click(function(){
 		$(this).closest('form').find(".input-help").remove();
 		$(this).closest('form').find('.form-submit').removeAttr('disabled');

@@ -14,7 +14,7 @@
             <br /><br />
             <div class="media media-y">
                 <a href="index" target="_blank">
-                <img style="height: 70px;" src="Images/Resources/midea.png" class="radius" alt="后台管理系统" /></a>
+                <img style="height: 90px;" src="Images/Resources/midea.png" class="img-border border-green radius-circle" alt="后台管理系统" /></a>
             </div>
             <br /><br />
             <form action="login_submit" method="post">
@@ -23,7 +23,7 @@
                 <div class="panel-body" style="padding:30px;">
                     <div class="form-group">
                         <div class="field field-icon-right">
-                            <input type="text" class="input" name="user.uName" placeholder="用户名" data-validate="required:请填写账号" />
+                            <input type="text" class="input" name="user.uNo" placeholder="用户名/工号" data-validate="required:请填写账号" />
                             <span class="icon icon-user"></span>
                         </div>
                     </div>

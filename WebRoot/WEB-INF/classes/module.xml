@@ -3,7 +3,7 @@
 	<nav1 aId="nav1" aName="客户管理" aType="0" aRemark="" aAllow=""
 		aLink="welcome" aShow="1" aOrder="1" aIcon="icon-users">
 		<nav2 aId="nav1_1" aName="客户信息录入" aType="nav1" aRemark="" aAllow=""
-			aLink="welcome" aShow="1" aOrder="1" aIcon="icon-pencil">
+			aLink="" aShow="1" aOrder="1" aIcon="icon-pencil">
 		</nav2>
 		<nav2 aId="nav1_2" aName="客户档案管理" aType="nav1" aRemark="" aAllow=""
 			aLink="welcome" aShow="1" aOrder="2" aIcon="icon-hdd-o">
@@ -142,7 +142,7 @@
 	<nav1 aId="nav7" aName="系统设置" aType="0" aRemark="" aAllow=""
 		aLink="welcome" aShow="1" aOrder="7" aIcon="icon-gears (alias)">
 		<nav2 aId="nav7_1" aName="用户管理" aType="nav7" aRemark=""
-			aAllow="" aLink="welcome" aShow="1" aOrder="1" aIcon="icon-user">
+			aAllow="" aLink="sys/userManger" aShow="1" aOrder="1" aIcon="icon-user">
 			<nav3 aId="nav7_1_1" aName="新增用户" aType="nav7_1" aRemark=""
 				aAllow="" aLink="welcome" aShow="0" aOrder="4" aIcon="icon-pencil">
 			</nav3>
