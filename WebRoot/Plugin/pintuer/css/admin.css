@@ -30,3 +30,5 @@ form .form-group:last-child{padding-bottom:0;}
 .admin-panel td{line-height:24px;}
 .admin-panel td .button{line-height:16px;}
 .admin-panel .pagination .active{background:#fff;}
+
+#refresh{margin-left: 5px; color: blue; font-size: 10px;}

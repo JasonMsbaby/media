@@ -154,7 +154,7 @@
 			</nav3>
 		</nav2>
 		<nav2 aId="nav7_2" aName="角色管理" aType="nav7" aRemark=""
-			aAllow="" aLink="welcome" aShow="1" aOrder="1" aIcon="icon-tags">
+			aAllow="" aLink="sys/roleManger" aShow="1" aOrder="1" aIcon="icon-tags">
 			<nav3 aId="nav7_2_1" aName="新增角色" aType="nav7_2" aRemark=""
 				aAllow="" aLink="welcome" aShow="0" aOrder="4" aIcon="icon-pencil">
 			</nav3>
@@ -165,27 +165,15 @@
 				aAllow="" aLink="welcome" aShow="0" aOrder="4" aIcon="icon-trash-o">
 			</nav3>
 		</nav2>
-		<nav2 aId="nav7_3" aName="权限管理" aType="nav7" aRemark=""
-			aAllow="" aLink="welcome" aShow="1" aOrder="1" aIcon="icon-unlock-alt">
-			<nav3 aId="nav7_3_1" aName="新增权限" aType="nav7_3" aRemark=""
+		<nav2 aId="nav7_3" aName="综合变量设置" aType="nav7" aRemark=""
+			aAllow="" aLink="welcome" aShow="1" aOrder="1" aIcon="icon-cog">
+			<nav3 aId="nav7_3_1" aName="新增变量" aType="nav7_3" aRemark=""
 				aAllow="" aLink="welcome" aShow="0" aOrder="4" aIcon="icon-pencil">
 			</nav3>
 			<nav3 aId="nav7_3_2" aName="编辑" aType="nav7_3" aRemark=""
 				aAllow="" aLink="welcome" aShow="0" aOrder="4" aIcon="icon-pencil-square-o">
 			</nav3>
 			<nav3 aId="nav7_3_3" aName="删除" aType="nav7_3" aRemark=""
-				aAllow="" aLink="welcome" aShow="0" aOrder="4" aIcon="icon-trash-o">
-			</nav3>
-		</nav2>
-		<nav2 aId="nav7_4" aName="综合变量设置" aType="nav7" aRemark=""
-			aAllow="" aLink="welcome" aShow="1" aOrder="1" aIcon="icon-cog">
-			<nav3 aId="nav7_4_1" aName="新增变量" aType="nav7_4" aRemark=""
-				aAllow="" aLink="welcome" aShow="0" aOrder="4" aIcon="icon-pencil">
-			</nav3>
-			<nav3 aId="nav7_4_2" aName="编辑" aType="nav7_4" aRemark=""
-				aAllow="" aLink="welcome" aShow="0" aOrder="4" aIcon="icon-pencil-square-o">
-			</nav3>
-			<nav3 aId="nav7_4_3" aName="删除" aType="nav7_4" aRemark=""
 				aAllow="" aLink="welcome" aShow="0" aOrder="4" aIcon="icon-trash-o">
 			</nav3>
 		</nav2>

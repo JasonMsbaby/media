@@ -8,8 +8,7 @@
 </head>
 <body>
  <div class="panel">
-  <div class="panel-head icon-bookmark">用户管理 <a
-   style="margin-left: 5px; color: blue; font-size: 10px;" href="sys/userManger"
+  <div class="panel-head icon-bookmark">用户管理 <a id="refresh"onclick="openAdmin('sys/userManger')"
   >刷新</a> <a style="float: right;" class="button border-blue button-little" onclick="$('#admin').load('sys/userManger_add')" >添加用户</a></div>
   <div class="panel-body">
    <table class="table table-hover">
@@ -34,9 +33,9 @@
       <td>${li.uCompany}</td>
       <td>${li.uPhone}</td>
       <td>${li.uRemark}</td>
-      <td><a class="button border-blue button-little" href="userManger_edit.html?uId=${li.uId}">编辑</a>
-       <a class="button border-red button-little" href="userManger_delete.html?uId=${li.uId}"
-       onclick="return confirm('确认删除？')"
+      <td><a class="button border-blue button-little" onclick="openAdmin('sys/userManger_edit?id=${li.uId}')">编辑</a>
+       <a class="button border-red button-little" 
+       onclick="if(confirm('确认删除？')){openAdmin('sys/userManger_delete?id=${li.uId}');}"
       >删除</a></td>
      </tr>
     </c:forEach>

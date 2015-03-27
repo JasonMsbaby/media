@@ -14,6 +14,6 @@ $(function() {
     });
 
 });
-function open(path) {
+function openAdmin(path) {
     $('#admin').load(path);
 }

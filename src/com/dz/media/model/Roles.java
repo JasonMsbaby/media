@@ -6,6 +6,7 @@ import javax.servlet.http.HttpSession;
 
 import com.dz.media.common.Help;
 import com.jfinal.plugin.activerecord.Model;
+import com.jfinal.plugin.activerecord.Page;
 /**
  * 角色信息Model
  * @author Jason
@@ -33,4 +34,9 @@ public class Roles extends Model<Roles> {
 	public List<Roles> getRolesList(HttpSession session) {
 		return find("select * from roles where rLevel>?", Help.getCurrentRole(session).get("rLevel"));
 	}
+
+	public Page<Roles> getRolesListByPage(Integer pageNumber,HttpSession session) {
+		return paginate(pageNumber, 10, "select * ", "from roles where rLevel>?", Help.getCurrentRole(session).get("rLevel"));
+	}
+
 }

@@ -185,8 +185,42 @@ $(function(){
 		}
 	};
 	
+	//zhangjie
+	//将form转为AJAX提交
+	function ajaxSubmit(frm, fn) {
+	    var dataPara = getFormJson(frm);
+	    $.ajax({
+	        url: frm.action,
+	        type: frm.method,
+	        data: dataPara,
+	        success: fn
+	    });
+	}
+	//zhangjie
+	//将form中的值转换为键值对。
+	function getFormJson(frm) {
+	    var o = {};
+	    var a = $(frm).serializeArray();
+	    $.each(a, function () {
+	        if (o[this.name] !== undefined) {
+	            if (!o[this.name].push) {
+	                o[this.name] = [o[this.name]];
+	            }
+	            o[this.name].push(this.value || '');
+	        } else {
+	            o[this.name] = this.value || '';
+	        }
+	    });
+
+	    return o;
+	}
+	
+	
+	
+	
 	/**
 	 * form校验机制
+	 * 修改 by zhangjie
 	 */
 	$('form').submit(function(){
 		$(this).find('input[data-validate],textarea[data-validate],select[data-validate]').trigger("blur");
@@ -196,12 +230,20 @@ $(function(){
 			$(this).find('.check-error').first().find('input[data-validate],textarea[data-validate],select[data-validate]').first().focus().select();
 			return false;
 		}else{
-		    alert($(this).attr("action"));
-		   //$('#admin').load('sys/userManger_add_submit');
+		    var action=$(this).attr("action");
+		    if(action!="login_submit"){
+			 ajaxSubmit(this, function(data){
+				if(data!="error"){
+				    alert("操作成功");
+				    $("#admin").html(data);
+				}else{
+				    alert("操作失败");
+				}
+			        });
+			    return false;
+		    }
 		}
 	});
-	
-	
 	$('.form-reset').click(function(){
 		$(this).closest('form').find(".input-help").remove();
 		$(this).closest('form').find('.form-submit').removeAttr('disabled');

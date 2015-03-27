@@ -5,7 +5,6 @@ import com.dz.media.controller.SystemController;
 import com.dz.media.model.Action;
 import com.dz.media.model.Goods;
 import com.dz.media.model.Guest;
-import com.dz.media.model.Permissions;
 import com.dz.media.model.Prices;
 import com.dz.media.model.Roles;
 import com.dz.media.model.Sale;
@@ -66,7 +65,6 @@ public class Config extends JFinalConfig {
 		arp.addMapping("action", "aId", Action.class);
 		arp.addMapping("Goods", "goId", Goods.class);
 		arp.addMapping("Guest", "gId", Guest.class);
-		arp.addMapping("Permissions", "psId", Permissions.class);
 		arp.addMapping("Prices", "pId", Prices.class);
 		arp.addMapping("Roles", "rId", Roles.class);
 		arp.addMapping("Sale", "sId", Sale.class);

@@ -12,11 +12,6 @@ import com.dz.media.model.User;
  *
  */
 public class Help {
-
-	public static String getAlert(String msg,String url){
-		return "<script>alert('"+msg+"');$('#admin').load('"+url+"')</script>";
-	}
-
 	public static String getAlert(String msg) {
 		return "<script>alert('"+msg+"');</script>";
 	}
@@ -38,7 +33,4 @@ public class Help {
 		return Roles.me.findById(getCurrentUser(session).get("u_rId"));
 	}
 	
-	public static String render(String path){
-		return "<script>$('#admin').load('"+path+"')</script>";
-	}
 }

@@ -33,4 +33,7 @@ public class Action extends Model<Action> {
 		find("select count(*) from action").get(0).get("count(*)").toString();
 		return Integer.parseInt(find("select count(*) from action").get(0).get("count(*)").toString());
 	}
+	public List<Action> findAll() {
+		return find("select * from action");
+	}
 }

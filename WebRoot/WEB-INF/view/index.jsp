@@ -17,16 +17,15 @@
    </span>
     <ul class="nav nav-inline admin-nav">
      <li class="nav1 active"><a class="icon-home">首页</a>
-      <ul><li class="active" onclick="$('#admin').load('welcome')"><a
-        class="icon-paper-plane-o"
-       > 欢迎页面</a></li></ul></li>
+      <ul><li class="active" onclick="openAdmin('welcome')"><a class="icon-paper-plane-o">
+         欢迎页面</a></li></ul></li>
      <c:forEach items="${list}" var="li">
       <c:if test="${li.aType==0}">
        <li class="nav1"><a href="#" class="${li.aIcon}"> ${li.aName}</a>
         <ul>
          <c:forEach items="${list}" var="li2">
           <c:if test="${li2.aType==li.aId}">
-           <li class="nav2" onclick="$('#admin').load('${li2.aLink}')"><a class="${li2.aIcon}">
+           <li class="nav2" onclick="openAdmin('${li2.aLink}')"><a class="${li2.aIcon}">
              ${li2.aName}</a></li>
           </c:if>
          </c:forEach>
@@ -38,19 +37,16 @@
     <ul class="bread">
      <li><a id="adressOne" href="index" class="icon-external-link-square">首页</a></li>
      <li id="adressTwo" href="#" class="icon-external-link">后台首页</li>
-   </ul>
-    <!-- <button class="button win-back icon-arrow-left">后退</button>
+   </ul> <!-- <button class="button win-back icon-arrow-left">后退</button>
     <button class="button win-forward">前进 <span class="icon-arrow-right"></span></button></div> -->
+  </div>
  </div>
 </div>
  <script type="text/javascript">
 	$(function() {
-	    $('#admin').load('welcome');
+	    openAdmin('welcome');
 	});
     </script>
- <div id="admin" class="admin">
- 
- 
- </div>
+ <div id="admin" class="admin"></div>
 </body>
 </html>
