@@ -6,6 +6,7 @@ import com.dz.media.common.Help;
 import com.dz.media.model.Action;
 import com.dz.media.model.Roles;
 import com.dz.media.model.User;
+import com.dz.media.model.Val;
 import com.jfinal.core.Controller;
 
 public class SystemController extends Controller {
@@ -108,6 +109,35 @@ public class SystemController extends Controller {
 		Roles role=Roles.me.findById(id);
 		if(role.delete()){
 			redirect("/sys/roleManger");
+		}else{
+			renderText("error");
+		}
+	}
+	// &*****************************综合变量管理****************************************************
+	public void valManger(){
+		setAttr("rootVal", Val.me.getRoot());
+		setAttr("vals", Val.me.getAll());
+		render("valManger.jsp");
+	}
+	public void valManger_edit(){
+		int type=getParaToInt("id");
+		setAttr("val", Val.me.findById(type));
+		setAttr("vals", Val.me.getByType(type));
+		render("valManger_edit.jsp");
+	}
+	public void valManger_edit_submit(){
+		Val v=getModel(Val.class, "val");
+		if(v.save()){
+			redirect("/sys/valManger_edit?id="+v.getInt("vType"));
+		}else{
+			renderText("error");
+		}
+	}
+	public void valManger_delete(){
+		int id=getParaToInt("id");
+		Val val=Val.me.findById(id);
+		if(val.delete()){
+			redirect("/sys/valManger_edit?id="+val.getInt("vType"));
 		}else{
 			renderText("error");
 		}

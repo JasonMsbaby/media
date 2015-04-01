@@ -1,3 +1,5 @@
+ <div class="panel">
   <div class="panel-head icon-bookmark">用户管理</div>
   <div class="panel-body"></div>
   <div class="panel-foot text-center"></div>
+  </div>

@@ -16,6 +16,9 @@
 <script src="Plugin/pintuer/js/admin.js"></script>
 <link type="image/x-icon" href="http://www.pintuer.com/favicon.ico" rel="shortcut icon" />
 <link href="http://www.pintuer.com/favicon.ico" rel="bookmark icon" />
-<title>美的    售后管理系统</title>
+
+
+
+<title>美的 售后管理系统</title>
 </head>
 </html>

@@ -1,6 +1,11 @@
 package com.dz.media.common;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 import javax.servlet.http.HttpSession;
+
+
 
 
 import com.dz.media.model.Roles;
@@ -31,6 +36,14 @@ public class Help {
 	public static Roles getCurrentRole(HttpSession session){
 		
 		return Roles.me.findById(getCurrentUser(session).get("u_rId"));
+	}
+	/**
+	 * 获取当前系统时间
+	 * @return
+	 */
+	public static String getCurrentTime(){
+		SimpleDateFormat format=new SimpleDateFormat("yyyy-MM-dd");
+		return format.format(new Date());
 	}
 	
 }

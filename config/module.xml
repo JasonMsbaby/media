@@ -3,21 +3,21 @@
 	<nav1 aId="nav1" aName="客户管理" aType="0" aRemark="" aAllow=""
 		aLink="welcome" aShow="1" aOrder="1" aIcon="icon-users">
 		<nav2 aId="nav1_1" aName="客户信息录入" aType="nav1" aRemark="" aAllow=""
-			aLink="" aShow="1" aOrder="1" aIcon="icon-pencil">
+			aLink="guest/guestManger_add" aShow="1" aOrder="1" aIcon="icon-pencil">
 		</nav2>
 		<nav2 aId="nav1_2" aName="客户档案管理" aType="nav1" aRemark="" aAllow=""
-			aLink="welcome" aShow="1" aOrder="2" aIcon="icon-hdd-o">
+			aLink="guest/guestManger" aShow="1" aOrder="2" aIcon="icon-hdd-o">
 			<nav3 aId="nav1_2_1" aName="查看详情" aType="nav1_2" aRemark=""
-				aAllow="" aLink="welcome" aShow="0" aOrder="1" aIcon="icon-navicon (alias)">
+				aAllow="" aLink="guest/guestManger_detail" aShow="0" aOrder="1" aIcon="icon-navicon (alias)">
 			</nav3>
 			<nav3 aId="nav1_2_2" aName="导出档案" aType="nav1_2" aRemark=""
 				aAllow="" aLink="welcome" aShow="0" aOrder="2" aIcon="icon-print">
 			</nav3>
 			<nav3 aId="nav1_2_3" aName="编辑" aType="nav1_2" aRemark=""
-				aAllow="" aLink="welcome" aShow="0" aOrder="3" aIcon="icon-pencil-square-o">
+				aAllow="" aLink="guest/guestManger_edit" aShow="0" aOrder="3" aIcon="icon-pencil-square-o">
 			</nav3>
 			<nav3 aId="nav1_2_4" aName="删除" aType="nav1_2" aRemark=""
-				aAllow="" aLink="welcome" aShow="0" aOrder="4" aIcon="icon-trash-o">
+				aAllow="" aLink="guest/guestManger_delete" aShow="0" aOrder="4" aIcon="icon-trash-o">
 			</nav3>
 		</nav2>
 	</nav1>
@@ -100,18 +100,18 @@
 	<nav1 aId="nav6" aName="内容管理" aType="0" aRemark="" aAllow=""
 		aLink="welcome" aShow="1" aOrder="6" aIcon="icon-bar-chart-o">
 		<nav2 aId="nav6_1" aName="商品基本信息管理" aType="nav6" aRemark=""
-			aAllow="" aLink="welcome" aShow="1" aOrder="1" aIcon="icon-cubes">
+			aAllow="" aLink="goods/goodsManger" aShow="1" aOrder="1" aIcon="icon-cubes">
 			<nav3 aId="nav6_1_1" aName="查看详情" aType="nav6_1" aRemark=""
-				aAllow="" aLink="welcome" aShow="0" aOrder="4" aIcon="icon-navicon (alias)">
+				aAllow="" aLink="goods/goodsManger_detail" aShow="0" aOrder="4" aIcon="icon-navicon (alias)">
 			</nav3>
 			<nav3 aId="nav6_1_2" aName="新增商品" aType="nav6_1" aRemark=""
-				aAllow="" aLink="welcome" aShow="0" aOrder="4" aIcon="icon-pencil">
+				aAllow="" aLink="goods/goodsManger_add" aShow="0" aOrder="4" aIcon="icon-pencil">
 			</nav3>
 			<nav3 aId="nav6_1_3" aName="编辑" aType="nav6_1" aRemark=""
-				aAllow="" aLink="welcome" aShow="0" aOrder="4" aIcon="icon-pencil-square-o">
+				aAllow="" aLink="goods/goodsManger_edit" aShow="0" aOrder="4" aIcon="icon-pencil-square-o">
 			</nav3>
 			<nav3 aId="nav6_1_4" aName="删除" aType="nav6_1" aRemark=""
-				aAllow="" aLink="welcome" aShow="0" aOrder="4" aIcon="icon-trash-o">
+				aAllow="" aLink="goods/goodsManger_delete" aShow="0" aOrder="4" aIcon="icon-trash-o">
 			</nav3>
 		</nav2>
 		<nav2 aId="nav6_2" aName="价目管理" aType="nav6" aRemark="" aAllow=""
@@ -165,16 +165,16 @@
 				aAllow="" aLink="welcome" aShow="0" aOrder="4" aIcon="icon-trash-o">
 			</nav3>
 		</nav2>
-		<nav2 aId="nav7_3" aName="综合变量设置" aType="nav7" aRemark=""
-			aAllow="" aLink="welcome" aShow="1" aOrder="1" aIcon="icon-cog">
-			<nav3 aId="nav7_3_1" aName="新增变量" aType="nav7_3" aRemark=""
+		<nav2 aId="nav7_3" aName="变量设置" aType="nav7" aRemark=""
+			aAllow="" aLink="sys/valManger" aShow="1" aOrder="1" aIcon="icon-cog">
+			<!-- <nav3 aId="nav7_3_1" aName="新增变量" aType="nav7_3" aRemark=""
 				aAllow="" aLink="welcome" aShow="0" aOrder="4" aIcon="icon-pencil">
+			</nav3> -->
+			<nav3 aId="nav7_3_1" aName="编辑" aType="nav7_3" aRemark=""
+				aAllow="" aLink="sys/valManger_edit" aShow="0" aOrder="4" aIcon="icon-pencil-square-o">
 			</nav3>
-			<nav3 aId="nav7_3_2" aName="编辑" aType="nav7_3" aRemark=""
-				aAllow="" aLink="welcome" aShow="0" aOrder="4" aIcon="icon-pencil-square-o">
-			</nav3>
-			<nav3 aId="nav7_3_3" aName="删除" aType="nav7_3" aRemark=""
-				aAllow="" aLink="welcome" aShow="0" aOrder="4" aIcon="icon-trash-o">
+			<nav3 aId="nav7_3_2" aName="删除" aType="nav7_3" aRemark=""
+				aAllow="" aLink="sys/valManger_delete" aShow="0" aOrder="4" aIcon="icon-trash-o">
 			</nav3>
 		</nav2>
 	</nav1>

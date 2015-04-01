@@ -7,7 +7,7 @@
 </head>
 <body>
  <div class="lefter"><img class="img-border radius-circle"
-  style="width: 180px; height: 75px; margin-top: 5px;" alt="" src="Images/Resources/midea.png"
+  style="width: 180px; height: 75px; margin-top: 5px;" alt="" src="Style/images/midea.png"
  ></div>
  <div class="righter nav-navicon" id="admin-nav">
   <div class="mainer">

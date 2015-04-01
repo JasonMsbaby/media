@@ -14,7 +14,7 @@
             <br /><br />
             <div class="media media-y">
                 <a href="index" target="_blank">
-                <img style="height: 90px;" src="Images/Resources/midea.png" class="img-border border-green radius-circle" alt="后台管理系统" /></a>
+                <img style="height: 90px;" src="Style/images/midea.png" class="img-border border-green radius-circle" alt="后台管理系统" /></a>
             </div>
             <br /><br />
             <form action="login_submit" method="post">
