@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jstl/core_rt"%>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
+<jsp:include page="../common/plugin.jsp" />
 <!DOCTYPE >
 <html>
 <head>
@@ -48,7 +49,7 @@
     </div>
      <div class="form-group">
       <div class="label"><span class="float-right">配置详情</span> <label>配置详情</label></div>
-      <div class="field"><textarea id="editor" style="width: 1024px; height: 500px;"></textarea></div>
+      <div class="field"><textarea name="goods.goProperty" id="editor" style="width: 1024px; height: 500px;"></textarea></div>
     </div>
      <div class="form-group">
       <div class="label"><span class="float-right">规格单位</span> <label>规格单位</label></div>

@@ -15,9 +15,16 @@ public class GoodsController extends Controller {
 	public void goodsManger_add(){
 		setAttr("types", Val.me.getByType(1));
 		setAttr("formats", Val.me.getByType(2));
+		render("goodsManger_add.jsp");
 	}
 	public void goodsManger_add_submit(){
-		render("goodsManger_add.jsp");
+		Goods goods=getModel(Goods.class, "goods");
+		if(goods.save()){
+			render("goodsManger_add.jsp");
+		}else{
+			renderText("error");
+		}
+		
 	}
 	public void goodsManger_edit(){
 	}
