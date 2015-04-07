@@ -214,7 +214,21 @@ $(function(){
 
 	    return o;
 	}
-	
+	/**
+	 * 允许请求并且不弹窗的请求
+	 */
+	function allow(path){
+	    var flag=false;
+	    var str1="prices/goodsSearch,";
+	    var str=str1.split(",");
+	    for(var t=0;t<str.length;t++){
+		if(str[t]==path){
+		    flag=true;
+		    break;
+		}
+	    }
+	    return flag;
+	}
 	
 	
 	
@@ -231,10 +245,15 @@ $(function(){
 			return false;
 		}else{
 		    var action=$(this).attr("action");
+		   // alert(action);
 		    if(action!="login_submit"){
 			 ajaxSubmit(this, function(data){
 				if(data!="error"){
-				    alert("操作成功");
+				    //alert(action);
+				    //alert(allow(action));
+				    if(!allow(action)){
+					 alert("操作成功");
+				    }
 				    $("#admin").html(data);
 				}else{
 				    alert("操作失败");

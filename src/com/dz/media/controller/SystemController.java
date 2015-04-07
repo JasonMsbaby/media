@@ -1,7 +1,5 @@
 package com.dz.media.controller;
 
-import javax.management.relation.Role;
-
 import com.dz.media.common.Help;
 import com.dz.media.model.Action;
 import com.dz.media.model.Roles;
@@ -61,84 +59,97 @@ public class SystemController extends Controller {
 		}
 
 	}
+
 	// &*****************************角色管理****************************************************
-	public void roleManger(){
-		int pageNumber=getPara("page")==null?1:Integer.parseInt(getPara("page"));
-		setAttr("roles", Roles.me.getRolesListByPage(pageNumber,getSession()));
+	public void roleManger() {
+		int pageNumber = getPara("page") == null ? 1 : Integer
+				.parseInt(getPara("page"));
+		setAttr("roles", Roles.me.getRolesListByPage(pageNumber, getSession()));
 		render("roleManger.jsp");
 	}
-	public void roleManger_add(){
+
+	public void roleManger_add() {
 		setAttr("permissions", Action.me.findAll());
 		setAttr("roleLevel", Help.getCurrentRole(getSession()).getInt("rLevel"));
 		render("roleManger_add.jsp");
 	}
-	public void roleManger_add_submit(){
-		Roles ro=getModel(Roles.class, "role");
-		int currentRoleLevel=Help.getCurrentRole(getSession()).getInt("rLevel");
-		if(currentRoleLevel<ro.getInt("rLevel")){
-			if(ro.save()){
+
+	public void roleManger_add_submit() {
+		Roles ro = getModel(Roles.class, "role");
+		int currentRoleLevel = Help.getCurrentRole(getSession()).getInt(
+				"rLevel");
+		if (currentRoleLevel < ro.getInt("rLevel")) {
+			if (ro.save()) {
 				redirect("/sys/roleManger");
-			}else{
+			} else {
 				renderText("error");
 			}
-		}else{
+		} else {
 			renderText("error");
 		}
-		
+
 	}
-	public void roleManger_edit(){
+
+	public void roleManger_edit() {
 		setAttr("role", Roles.me.findById(getParaToInt("id")));
 		setAttr("permissions", Action.me.findAll());
 		render("roleManger_edit.jsp");
 	}
-	public void roleManger_edit_submit(){
-		Roles ro=getModel(Roles.class, "role");
-		int currentRoleLevel=Help.getCurrentRole(getSession()).getInt("rLevel");
-		if(currentRoleLevel<ro.getInt("rLevel")){
-			if(ro.update()){
+
+	public void roleManger_edit_submit() {
+		Roles ro = getModel(Roles.class, "role");
+		int currentRoleLevel = Help.getCurrentRole(getSession()).getInt(
+				"rLevel");
+		if (currentRoleLevel < ro.getInt("rLevel")) {
+			if (ro.update()) {
 				redirect("/sys/roleManger");
-			}else{
+			} else {
 				renderText("error");
 			}
-		}else{
+		} else {
 			renderText("error");
 		}
 	}
-	public void roleManger_delete(){
-		int id=getParaToInt("id");
-		Roles role=Roles.me.findById(id);
-		if(role.delete()){
+
+	public void roleManger_delete() {
+		int id = getParaToInt("id");
+		Roles role = Roles.me.findById(id);
+		if (role.delete()) {
 			redirect("/sys/roleManger");
-		}else{
+		} else {
 			renderText("error");
 		}
 	}
+
 	// &*****************************综合变量管理****************************************************
-	public void valManger(){
+	public void valManger() {
 		setAttr("rootVal", Val.me.getRoot());
 		setAttr("vals", Val.me.getAll());
 		render("valManger.jsp");
 	}
-	public void valManger_edit(){
-		int type=getParaToInt("id");
+
+	public void valManger_edit() {
+		int type = getParaToInt("id");
 		setAttr("val", Val.me.findById(type));
 		setAttr("vals", Val.me.getByType(type));
 		render("valManger_edit.jsp");
 	}
-	public void valManger_edit_submit(){
-		Val v=getModel(Val.class, "val");
-		if(v.save()){
-			redirect("/sys/valManger_edit?id="+v.getInt("vType"));
-		}else{
+
+	public void valManger_edit_submit() {
+		Val v = getModel(Val.class, "val");
+		if (v.save()) {
+			redirect("/sys/valManger_edit?id=" + v.getInt("vType"));
+		} else {
 			renderText("error");
 		}
 	}
-	public void valManger_delete(){
-		int id=getParaToInt("id");
-		Val val=Val.me.findById(id);
-		if(val.delete()){
-			redirect("/sys/valManger_edit?id="+val.getInt("vType"));
-		}else{
+
+	public void valManger_delete() {
+		int id = getParaToInt("id");
+		Val val = Val.me.findById(id);
+		if (val.delete()) {
+			redirect("/sys/valManger_edit?id=" + val.getInt("vType"));
+		} else {
 			renderText("error");
 		}
 	}

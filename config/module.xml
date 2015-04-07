@@ -115,27 +115,30 @@
 			</nav3>
 		</nav2>
 		<nav2 aId="nav6_2" aName="价目管理" aType="nav6" aRemark="" aAllow=""
-			aLink="welcome" aShow="1" aOrder="1" aIcon="icon-cny (alias)">
+			aLink="prices/pricesManger" aShow="1" aOrder="1" aIcon="icon-cny (alias)">
 			<nav3 aId="nav6_2_1" aName="新增价目" aType="nav6_2" aRemark=""
-				aAllow="" aLink="welcome" aShow="0" aOrder="4" aIcon="icon-pencil">
+				aAllow="" aLink="prices/pricesManger_add" aShow="0" aOrder="4" aIcon="icon-pencil">
 			</nav3>
 			<nav3 aId="nav6_2_2" aName="编辑" aType="nav6_2" aRemark=""
-				aAllow="" aLink="welcome" aShow="0" aOrder="4" aIcon="icon-pencil-square-o">
+				aAllow="" aLink="prices/pricesManger_edit" aShow="0" aOrder="4" aIcon="icon-pencil-square-o">
 			</nav3>
 			<nav3 aId="nav6_2_3" aName="删除" aType="nav6_2" aRemark=""
+				aAllow="" aLink="prices/pricesManger_delete" aShow="0" aOrder="4" aIcon="icon-trash-o">
+			</nav3>
+			<nav3 aId="nav6_2_4" aName="导出价格表" aType="nav6_2" aRemark=""
 				aAllow="" aLink="welcome" aShow="0" aOrder="4" aIcon="icon-trash-o">
 			</nav3>
 		</nav2>
 		<nav2 aId="nav6_3" aName="维修备件信息管理" aType="nav6" aRemark=""
-			aAllow="" aLink="welcome" aShow="1" aOrder="1" aIcon="icon-suitcase">
+			aAllow="" aLink="sparePartsBase/sparePartsBaseManger" aShow="1" aOrder="1" aIcon="icon-suitcase">
 			<nav3 aId="nav6_3_1" aName="新增备件" aType="nav6_3" aRemark=""
-				aAllow="" aLink="welcome" aShow="0" aOrder="4" aIcon="icon-pencil">
+				aAllow="" aLink="sparePartsBase/sparePartsBaseManger_add" aShow="0" aOrder="4" aIcon="icon-pencil">
 			</nav3>
 			<nav3 aId="nav6_3_1" aName="编辑" aType="nav6_3" aRemark=""
-				aAllow="" aLink="welcome" aShow="0" aOrder="4" aIcon="icon-pencil-square-o">
+				aAllow="" aLink="sparePartsBase/sparePartsBaseManger_edit" aShow="0" aOrder="4" aIcon="icon-pencil-square-o">
 			</nav3>
 			<nav3 aId="nav6_3_1" aName="删除" aType="nav6_3" aRemark=""
-				aAllow="" aLink="welcome" aShow="0" aOrder="4" aIcon="icon-trash-o">
+				aAllow="" aLink="sparePartsBase/sparePartsBaseManger_delete" aShow="0" aOrder="4" aIcon="icon-trash-o">
 			</nav3>
 		</nav2>
 	</nav1>

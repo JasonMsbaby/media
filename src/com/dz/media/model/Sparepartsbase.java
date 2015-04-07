@@ -1,5 +1,7 @@
 package com.dz.media.model;
 
+import java.util.List;
+
 import com.jfinal.plugin.activerecord.Model;
 /**
  * 备件基本信息Model

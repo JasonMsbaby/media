@@ -18,58 +18,74 @@
 </script>
 </head>
 <body>
- <form method="post" method="post" action="goods/goodsManger_add_submit">
+ <form method="post" method="post" action="goods/goodsManger_edit_submit">
   <div class="panel">
-   <div class="panel-head icon-bookmark">添加商品</div>
+   <div class="panel-head icon-bookmark">编辑商品</div>
    <div class="panel-body">
     <div class="form-group">
      <div class="label"><span class="float-right">商品编号</span> <label>商品编号</label></div>
      <div class="field"><input type="text" class="input" name="goods.goNo" size="30"
-      data-validate="required:不为空" placeholder="商品编号"
-     /></div>
+      data-validate="required:不为空" placeholder="商品编号" value="${goods.goNo}"
+     />
+     <input type="hidden" name="goods.goId" value="${goods.goId}" />
+     </div>
    </div>
     <div class="form-group">
      <div class="label"><span class="float-right">商品大类</span> <label>商品大类</label></div>
      <div class="field"><select class="input" name="goods.goType">
        <c:forEach items="${types}" var="li">
-        <option value="${li.vName}">${li.vName}</option>
+        <c:choose>
+         <c:when test="${goods.goType==li.vName}">
+          <option selected="selected" value="${li.vName}">${li.vName}</option>
+         </c:when>
+         <c:otherwise>
+          <option value="${li.vName}">${li.vName}</option>
+         </c:otherwise>
+        </c:choose>
        </c:forEach>
      </select></div>
      <div class="form-group">
       <div class="label"><span class="float-right">商品名称</span> <label>商品名称</label></div>
       <div class="field"><input type="text" class="input" name="goods.goName" size="30"
-       data-validate="required:不为空" placeholder="商品名称"
+       data-validate="required:不为空" placeholder="商品名称" value="${goods.goName}"
       /></div>
     </div>
      <div class="form-group">
       <div class="label"><span class="float-right">商品型号</span> <label>商品型号</label></div>
       <div class="field"><input type="text" class="input" name="goods.goVersion" size="30"
-       data-validate="required:不为空" placeholder="商品型号"
+       data-validate="required:不为空" placeholder="商品型号" value="${goods.goVersion}"
       /></div>
     </div>
      <div class="form-group">
       <div class="label"><span class="float-right">配置详情</span> <label>配置详情</label></div>
       <div class="field"><textarea name="goods.goProperty" id="editor"
        style="width: 1024px; height: 500px;"
-      ></textarea></div>
+      >${goods.goProperty}</textarea></div>
     </div>
      <div class="form-group">
       <div class="label"><span class="float-right">规格单位</span> <label>规格单位</label></div>
       <div class="field"><select class="input" name="goods.goFormat">
         <c:forEach items="${formats}" var="li">
-         <option value="${li.vName}">${li.vName}</option>
+         <c:choose>
+          <c:when test="${goods.goFormat==li.vName}">
+           <option selected="selected" value="${li.vName}">${li.vName}</option>
+          </c:when>
+          <c:otherwise>
+           <option value="${li.vName}">${li.vName}</option>
+          </c:otherwise>
+         </c:choose>
         </c:forEach>
       </select></div>
       <div class="form-group">
        <div class="label"><span class="float-right">图片详情</span> <label>图片详情</label></div>
        <div class="field"><input type="text" class="input" name="goods.goImg" size="30"
-        placeholder="图片详情"
+        placeholder="图片详情" value="${goods.goImg}"
        /></div>
      </div>
       <div class="form-group">
        <div class="label"><span class="float-right">备注</span> <label>备注</label></div>
        <div class="field"><input type="text" class="input" name="goods.goRemark" size="30"
-        placeholder="备注"
+        placeholder="备注" value="${goods.goRemark}"
        /></div>
      </div>
     </div>

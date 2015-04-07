@@ -58,16 +58,16 @@
      <a class="button border-blue button-little ">上一页</a>
     </c:when>
     <c:otherwise>
-     <a class="button border-blue button-little" onclick="$('#admin').load('sys/userManger?page=${guest.pageNumber-1}')" >上一页</a>
+     <a class="button border-blue button-little" onclick="$('#admin').load('guest/guestManger?page=${guest.pageNumber-1}')" >上一页</a>
     </c:otherwise>
    </c:choose> 总共${guest.totalRow}条，每页10条，总共${guest.totalPage}页 ，当前第${guest.pageNumber}页 <c:choose>
     <c:when test="${guest.pageNumber==guest.totalPage}">
      <a class="button border-blue button-little disabled">下一页</a>
     </c:when>
     <c:otherwise>
-     <a class="button border-blue button-little" onclick="$('#admin').load('sys/userManger?page=${guest.pageNumber+1}')" >下一页</a>
+     <a class="button border-blue button-little" onclick="$('#admin').load('guest/guestManger?page=${guest.pageNumber+1}')" >下一页</a>
     </c:otherwise>
-   </c:choose> 跳转到 <select id="jump" onchange="$('#admin').load('sys/userManger?page='+this.options[this.options.selectedIndex].text)">
+   </c:choose> 跳转到 <select id="jump" onchange="$('#admin').load('guest/guestManger?page='+this.options[this.options.selectedIndex].text)">
     <c:forEach begin="1" end="${guest.totalPage}" var="li">
     <c:choose>
     <c:when test="${guest.pageNumber==li}"><option selected="selected">${li}</option></c:when>

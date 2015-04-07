@@ -4,6 +4,7 @@ import java.util.List;
 
 import javax.management.relation.Role;
 
+import com.dz.media.common.Help;
 import com.jfinal.plugin.activerecord.Model;
 import com.jfinal.plugin.activerecord.Page;
 /**
@@ -79,7 +80,7 @@ public class User extends Model<User> {
 			}
 			str=str.substring(0,str.length()-1);
 			str+=")";
-			Page<User> usersList=paginate(pageIndex, 10, "select * ", "from user where u_rId in "+ str);
+			Page<User> usersList=paginate(pageIndex, Help.getPageSize(), "select * ", "from user where u_rId in "+ str);
 			for(User u:usersList.getList()){
 				u.set("uRemark", u.getRoles().get("rName"));
 			}

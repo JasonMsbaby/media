@@ -3,6 +3,8 @@ package com.dz.media.common;
 import com.dz.media.controller.GoodsController;
 import com.dz.media.controller.GuestController;
 import com.dz.media.controller.IndexController;
+import com.dz.media.controller.PricesController;
+import com.dz.media.controller.SparePartsBase;
 import com.dz.media.controller.SystemController;
 import com.dz.media.model.Action;
 import com.dz.media.model.Goods;
@@ -43,14 +45,17 @@ public class Config extends JFinalConfig {
 		me.setEncoding("UTF-8");
 		me.setViewType(ViewType.JSP);
 		me.setUrlParaSeparator("&&");
+		me.setBaseViewPath("/WEB-INF/view");
 	}
 
 	@Override
 	public void configRoute(Routes me) {
-		me.add("/",IndexController.class,"/WEB-INF/view");
-		me.add("sys",SystemController.class,"/WEB-INF/view/system");
-		me.add("guest",GuestController.class,"/WEB-INF/view/guest");
-		me.add("goods",GoodsController.class,"/WEB-INF/view/goods");
+		me.add("/",IndexController.class);
+		me.add("sys",SystemController.class,"system");
+		me.add("guest",GuestController.class,"guest");
+		me.add("goods",GoodsController.class,"goods");
+		me.add("prices",PricesController.class,"prices");
+		me.add("sparePartsBase",SparePartsBase.class,"sparePartsBase");
 	}
 
 	@Override

@@ -23,7 +23,7 @@ public class GuestController extends Controller {
 	//************************客户信息管理**********************************************
 	public void guestManger(){
 		int page=getPara("page")==null?1:Integer.parseInt(getPara("page"));
-		setAttr("guest", Guest.me.paginate(page, 10, "select *", "from guest"));
+		setAttr("guest", Guest.me.paginate(page, Help.getPageSize(), "select *", "from guest"));
 		render("guestManger.jsp");
 	}
 	//************************查看客户详情**********************************************

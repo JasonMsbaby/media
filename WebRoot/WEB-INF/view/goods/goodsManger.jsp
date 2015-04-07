@@ -8,8 +8,11 @@
 </head>
 <body>
  <div class="panel">
-  <div class="panel-head icon-bookmark">商品基本信息管理 <a id="refresh"onclick="openAdmin('goods/goodsManger')"
-  >刷新</a> <a style="float: right;" class="button border-blue button-little" onclick="$('#admin').load('goods/goodsManger_add')" >添加商品</a></div>
+  <div class="panel-head icon-bookmark">商品基本信息管理 <a id="refresh"
+   onclick="openAdmin('goods/goodsManger')"
+  >刷新</a> <a style="float: right;" class="button border-blue button-little"
+   onclick="$('#admin').load('goods/goodsManger_add')"
+  >添加商品</a></div>
   <div class="panel-body">
    <table class="table table-hover">
     <tr>
@@ -29,9 +32,12 @@
       <td>${li.goVersion}</td>
       <td>${li.goFormat}</td>
       <td>${li.goRemark}</td>
-      <td><a class="button border-blue button-little" onclick="openAdmin('goods/goodsManger_edit?id=${li.uId}')">编辑</a>
-       <a class="button border-red button-little" 
-       onclick="if(confirm('确认删除？')){openAdmin('goods/goodsManger_delete?id=${li.uId}');}"
+      <td><a class="button border-green button-little"
+       onclick="openAdmin('goods/goodsManger_detail?id=${li.goId}')"
+      >查看详情</a> <a class="button border-blue button-little"
+       onclick="openAdmin('goods/goodsManger_edit?id=${li.goId}')"
+      >编辑</a> <a class="button border-red button-little"
+       onclick="if(confirm('确认删除？')){openAdmin('goods/goodsManger_delete?id=${li.goId}');}"
       >删除</a></td>
      </tr>
     </c:forEach>
@@ -42,21 +48,31 @@
      <a class="button border-blue button-little ">上一页</a>
     </c:when>
     <c:otherwise>
-     <a class="button border-blue button-little" onclick="$('#admin').load('sys/userManger?page=${goods.pageNumber-1}')" >上一页</a>
+     <a class="button border-blue button-little"
+      onclick="$('#admin').load('goods/goodsManger?page=${goods.pageNumber-1}')"
+     >上一页</a>
     </c:otherwise>
-   </c:choose> 总共${goods.totalRow}条，每页10条，总共${goods.totalPage}页 ，当前第${goods.pageNumber}页 <c:choose>
+   </c:choose> 总共${goods.totalRow}条，每页${good.pageSize}条，总共${goods.totalPage}页 ，当前第${goods.pageNumber}页 <c:choose>
     <c:when test="${goods.pageNumber==goods.totalPage}">
      <a class="button border-blue button-little disabled">下一页</a>
     </c:when>
     <c:otherwise>
-     <a class="button border-blue button-little" onclick="$('#admin').load('sys/userManger?page=${goods.pageNumber+1}')" >下一页</a>
+     <a class="button border-blue button-little"
+      onclick="$('#admin').load('goods/goodsManger?page=${goods.pageNumber+1}')"
+     >下一页</a>
     </c:otherwise>
-   </c:choose> 跳转到 <select id="jump" onchange="$('#admin').load('sys/userManger?page='+this.options[this.options.selectedIndex].text)">
+   </c:choose> 跳转到 <select id="jump"
+   onchange="$('#admin').load('goods/goodsManger?page='+this.options[this.options.selectedIndex].text)"
+  >
     <c:forEach begin="1" end="${goods.totalPage}" var="li">
-    <c:choose>
-    <c:when test="${goods.pageNumber==li}"><option selected="selected">${li}</option></c:when>
-    <c:otherwise><option>${li}</option></c:otherwise>
-    </c:choose>
+     <c:choose>
+      <c:when test="${goods.pageNumber==li}">
+       <option selected="selected">${li}</option>
+      </c:when>
+      <c:otherwise>
+       <option>${li}</option>
+      </c:otherwise>
+     </c:choose>
     </c:forEach>
   </select> 页</div>
 </div>

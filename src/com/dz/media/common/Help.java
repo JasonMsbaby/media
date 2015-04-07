@@ -45,5 +45,12 @@ public class Help {
 		SimpleDateFormat format=new SimpleDateFormat("yyyy-MM-dd");
 		return format.format(new Date());
 	}
+	/**
+	 * 获取分页条数
+	 * @return
+	 */
+	public static int getPageSize(){
+		return 5;
+	}
 	
 }

@@ -36,7 +36,7 @@ public class Roles extends Model<Roles> {
 	}
 
 	public Page<Roles> getRolesListByPage(Integer pageNumber,HttpSession session) {
-		return paginate(pageNumber, 10, "select * ", "from roles where rLevel>?", Help.getCurrentRole(session).get("rLevel"));
+		return paginate(pageNumber, Help.getPageSize(), "select * ", "from roles where rLevel>?", Help.getCurrentRole(session).get("rLevel"));
 	}
 
 }
