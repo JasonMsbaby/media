@@ -13,22 +13,21 @@
 <script type="text/javascript" src="Plugin/autocomplete/jquery.autocomplete.js"></script>
 <script type="text/javascript" src="Style/js/autoCompelete.js"></script>
 <script type="text/javascript">
-$(function(){
-   $(".date").datepicker(); 
-});
+    $(function() {
+	$(".date").datepicker();
+    });
 </script>
 </head>
 <body>
- <form method="post" method="post" action="sales/salesManger_add_submit">
+ <form method="post" method="post" action="sales/salesManger_edit_submit">
   <div class="panel">
    <div class="panel-head icon-bookmark">&nbsp;&nbsp;编辑销售记录</div>
    <div class="panel-body">
     <div class="form-group">
      <div class="label"><span class="float-right">销售编号</span> <label>销售编号</label></div>
-     <div class="field">
-     <input name="sales.sId" type="hidden" value="${sales.sId}" />
-     <input type="text" class="input" name="sales.sNo" size="30"
-      data-validate="required:不为空" readonly="readonly" placeholder="销售编号" value="${sales.sNo}"
+     <div class="field"><input name="sales.sId" type="hidden" value="${sales.sId}" /> <input
+      type="text" class="input" name="sales.sNo" size="30" data-validate="required:不为空"
+      readonly="readonly" placeholder="销售编号" value="${sales.sNo}"
      /></div>
    </div>
     <div class="form-group">
@@ -65,14 +64,14 @@ $(function(){
    </div>
     <div class="form-group">
      <div class="label"><span class="float-right">销售日期</span> <label>销售日期</label></div>
-     <div class="field"><input type="text" class="input date"  name="sales.sSaledDate"
-      size="30" placeholder="点击选择销售日期"  value="${sales.sSaledDate}"
+     <div class="field"><input type="text" class="input date" name="sales.sSaledDate"
+      size="30" placeholder="点击选择销售日期" value="${sales.sSaledDate}"
      /></div>
    </div>
     <div class="form-group">
      <div class="label"><span class="float-right">质保截至</span> <label>质保截至</label></div>
      <div class="field"><input type="text" class="input date" name="sales.sWarrantyDate"
-      size="30" placeholder="质保截至"  value="${sales.sWarrantyDate}"
+      size="30" placeholder="质保截至" value="${sales.sWarrantyDate}"
      /></div>
    </div>
     <div class="form-group">
@@ -97,7 +96,14 @@ $(function(){
      <div class="label"><span class="float-right">购买方式</span> <label>购买方式</label></div>
      <div class="field"><select name="sales.sPayType" class="input">
        <c:forEach items="${buyType}" var="li">
-        <option value="${li.vName}">${li.vName}</option>
+        <c:choose>
+         <c:when test="${li.vName==sales.sPayType}">
+          <option selected="selected" value="${li.vName}">${li.vName}</option>
+         </c:when>
+         <c:otherwise>
+          <option value="${li.vName}">${li.vName}</option>
+         </c:otherwise>
+        </c:choose>
        </c:forEach>
      </select></div>
      <div class="form-group">

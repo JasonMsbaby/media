@@ -50,13 +50,27 @@ public class SalesController extends Controller {
 	public void salesManger_edit() {
 		Sale s=Sale.me.findWithId(getPara("id"));
 		setAttr("sales", s);
+		setAttr("buyType", Val.me.getByType(6));
 	}
 
 	public void salesManger_edit_submit() {
-
+		Sale s=getModel(Sale.class, "sales");
+		if(s.update()){
+			redirect("/sales/salesManger");
+		}else{
+			renderText("更新失败");
+		}
 	}
 
 	public void salesManger_delete() {
-
+		Sale s=Sale.me.findById(getPara("id"));
+		if(s.delete()){
+			redirect("/sales/salesManger");
+		}else{
+			renderText("删除失败");
+		}
+	}
+	public void salesManger_detail(){
+		setAttr("sales",Sale.me.findWithId(getPara("id")));
 	}
 }

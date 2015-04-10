@@ -20,7 +20,7 @@
       <div class="form-group">
        <div class="label"><label >检索条件&nbsp;&nbsp;</label></div>
        <div class="field"><input type="text" class="input" name="keyword"
-        size="125" placeholder="支持模糊查找 可根据 客户编号/客户姓名/客户手机号/销售记录编号/销售商品编号/销售时间/销售员/销售日期/销售方式等等关键字进行搜索" value="${keyword}"
+        size="125" placeholder="支持模糊查找 " value="${keyword}"
        /></div>
      </div>
       <div class="form-button"><button class="button bg-main" type="submit">搜索</button></div>
@@ -55,7 +55,11 @@
       <td>${li.sInvoice}</td>
       <td>${li.sInputDate}</td>
       <td>${li.uName}</td>
-      <td><a class="button border-blue button-little"
+      <td>
+      <a class="button border-green button-little"
+       onclick="openAdmin('sales/salesManger_detail?id=${li.sId}')"
+      >查看详情</a>
+      <a class="button border-blue button-little"
        onclick="openAdmin('sales/salesManger_edit?id=${li.sId}')"
       >编辑</a> <a class="button border-red button-little"
        onclick="if(confirm('确认删除？')){openAdmin('sales/salesManger_delete?id=${li.sId}');}"
