@@ -25,6 +25,7 @@ public class IndexController extends Controller {
 	public void welcome() {
 		render("common/welcome.jsp");
 	}
+	
 
 	/**
 	 * 获取验证码

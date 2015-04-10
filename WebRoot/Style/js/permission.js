@@ -14,7 +14,7 @@ $(function() {
 		//$("form:first").submit();
 	});
 	//自动收缩
-	$(".nav1").click(function(){
+	$(".nav11").click(function(){
 		$(this).next().toggle();
 		if($(this).next().css("display")=="none"){
 			$(this).parent().attr("class","icon-folder-o");
@@ -25,7 +25,7 @@ $(function() {
 		}
 		
 	});
-	$(".nav2").click(function(){
+	$(".nav22").click(function(){
 		$(this).next().next().toggle();
 		if($(this).next().next().css("display")=="none"){
 			$(this).parent().attr("class","icon-folder-o");

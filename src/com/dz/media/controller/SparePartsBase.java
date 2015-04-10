@@ -15,8 +15,9 @@ public class SparePartsBase extends Controller {
 
 	public void sparePartsBaseManger() {
 		int page = getAttr("page") == null ? 1 : getParaToInt("page");
-		setAttr("spb", Sparepartsbase.me.paginate(page, Help.getPageSize(),
-				"select *", "from sparepartsbase"));
+		String keyword=getPara("keyword")==null?"":getPara("keyword");
+		setAttr("keyword", keyword);
+		setAttr("spb", Sparepartsbase.me.getByPage(page,keyword));
 	}
 
 	public void sparePartsBaseManger_add() {
@@ -29,7 +30,7 @@ public class SparePartsBase extends Controller {
 		if (spb.save()) {
 			redirect("/sparePartsBase/sparePartsBaseManger");
 		} else {
-			renderText("error");
+			renderText("保存失败");
 		}
 	}
 
@@ -44,7 +45,7 @@ public class SparePartsBase extends Controller {
 		if (spb.update()) {
 			redirect("/sparePartsBase/sparePartsBaseManger");
 		} else {
-			renderText("error");
+			renderText("更新失败");
 		}
 	}
 
@@ -53,7 +54,7 @@ public class SparePartsBase extends Controller {
 		if (spb.delete()) {
 			redirect("/sparePartsBase/sparePartsBaseManger");
 		} else {
-			renderText("error");
+			renderText("删除失败");
 		}
 	}
 

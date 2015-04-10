@@ -8,6 +8,7 @@ import javax.servlet.http.HttpSession;
 
 
 
+
 import com.dz.media.model.Roles;
 import com.dz.media.model.User;
 
@@ -45,6 +46,10 @@ public class Help {
 		SimpleDateFormat format=new SimpleDateFormat("yyyy-MM-dd");
 		return format.format(new Date());
 	}
+	public static String getCurrentTime2() {
+		SimpleDateFormat format=new SimpleDateFormat("yyyyMMddhhmmss");
+		return format.format(new Date());
+	}
 	/**
 	 * 获取分页条数
 	 * @return
@@ -52,5 +57,6 @@ public class Help {
 	public static int getPageSize(){
 		return 5;
 	}
+	
 	
 }

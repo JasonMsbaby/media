@@ -8,7 +8,7 @@
 </head>
 <body>
  <div class="panel">
-  <div class="panel-head icon-bookmark">角色管理 <a id="refresh"onclick="openAdmin('sys/roleManger')"
+  <div class="panel-head icon-bookmark">&nbsp;&nbsp;角色管理 <a id="refresh"onclick="openAdmin('sys/roleManger')"
   >刷新</a> <a style="float: right;" class="button border-blue button-little" onclick="openAdmin('sys/roleManger_add')" >添加角色</a></div>
   <div class="panel-body">
    <table class="table table-hover">
@@ -38,16 +38,16 @@
      <a class="button border-blue button-little ">上一页</a>
     </c:when>
     <c:otherwise>
-     <a class="button border-blue button-little" onclick="$('#admin').load('sys/userManger?page=${roles.pageNumber-1}')" >上一页</a>
+     <a class="button border-blue button-little" onclick="$('#admin').load('sys/roleManger?page=${roles.pageNumber-1}')" >上一页</a>
     </c:otherwise>
-   </c:choose> 总共${roles.totalRow}条，每页10条，总共${roles.totalPage}页 ，当前第${roles.pageNumber}页 <c:choose>
+   </c:choose> 总共${roles.totalRow}条，每页${roles.pageSize}条，总共${roles.totalPage}页 ，当前第${roles.pageNumber}页 <c:choose>
     <c:when test="${roles.pageNumber==roles.totalPage}">
      <a class="button border-blue button-little disabled">下一页</a>
     </c:when>
     <c:otherwise>
-     <a class="button border-blue button-little" onclick="$('#admin').load('sys/userManger?page=${roles.pageNumber+1}')" >下一页</a>
+     <a class="button border-blue button-little" onclick="$('#admin').load('sys/roleManger?page=${roles.pageNumber+1}')" >下一页</a>
     </c:otherwise>
-   </c:choose> 跳转到 <select id="jump" onchange="$('#admin').load('sys/userManger?page='+this.options[this.options.selectedIndex].text)">
+   </c:choose> 跳转到 <select id="jump" onchange="$('#admin').load('sys/roleManger?page='+this.options[this.options.selectedIndex].text)">
     <c:forEach begin="1" end="${roles.totalPage}" var="li">
     <c:choose>
     <c:when test="${roles.pageNumber==li}"><option selected="selected">${li}</option></c:when>

@@ -1,6 +1,5 @@
 package com.dz.media.controller;
 
-import com.dz.media.common.Help;
 import com.dz.media.model.Goods;
 import com.dz.media.model.Val;
 import com.jfinal.core.Controller;
@@ -10,8 +9,9 @@ public class GoodsController extends Controller {
 	// *************************商品基本信息管理***************************************
 	public void goodsManger() {
 		int pageNumber = getPara("page") == null ? 1 : getParaToInt("page");
-		setAttr("goods", Goods.me.paginate(pageNumber, Help.getPageSize(), "select * ",
-				"from goods order by goType"));
+		String keyword=getPara("keyword")==null?"":getPara("keyword");
+		setAttr("keyword", keyword);
+		setAttr("goods", Goods.me.getByPage(pageNumber,keyword));
 		render("goodsManger.jsp");
 	}
 
@@ -26,7 +26,7 @@ public class GoodsController extends Controller {
 		if (goods.save()) {
 			redirect("/goods/goodsManger_add");
 		} else {
-			renderText("error");
+			renderText("保存失败");
 		}
 
 	}
@@ -42,7 +42,7 @@ public class GoodsController extends Controller {
 		if(goods.update()){
 			redirect("/goods/goodsManger");
 		}else{
-			renderText("error");
+			renderText("更新失败");
 		}
 		
 	}
@@ -58,8 +58,13 @@ public class GoodsController extends Controller {
 		if (g.delete()) {
 			redirect("/goods/goodsManger");
 		} else {
-			render("error");
+			renderText("删除失败");
 		}
 
+	}
+	// *************************其他帮助函数***************************************
+	public void getGoodsJson(){
+		String where=getPara("keyword");
+		renderJson(Goods.me.likeSearch(where));
 	}
 }

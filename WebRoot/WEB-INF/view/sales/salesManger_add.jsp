@@ -5,73 +5,116 @@
 <!DOCTYPE >
 <html>
 <head>
+<!-- 时间选择控件 -->
+<link rel="stylesheet" type="text/css" href="Plugin/datepicker/css/jquery-ui.css">
+<script type="text/javascript" src="Plugin/datepicker/js/jquery-ui-datepicker.js"></script>
+<!-- 自动补全 -->
+<link rel="stylesheet" type="text/css" href="Plugin/autocomplete/jquery.autocomplete.css">
+<script type="text/javascript" src="Plugin/autocomplete/jquery.autocomplete.js"></script>
+<script type="text/javascript" src="Style/js/autoCompelete.js"></script>
+<script type="text/javascript">
+$(function(){
+   $(".date").datepicker(); 
+});
+</script>
 </head>
 <body>
- <form method="post" method="post" action="sys/userManger_add_submit">
+ <form method="post" method="post" action="sales/salesManger_add_submit">
   <div class="panel">
-   <div class="panel-head icon-bookmark">添加销售记录</div>
+   <div class="panel-head icon-bookmark">&nbsp;&nbsp;添加销售记录</div>
    <div class="panel-body">
     <div class="form-group">
-     <div class="label"><span class="float-right">用户唯一的识别号码，用于登陆的帐号</span> <label>工号</label></div>
-     <div class="field"><input type="text" class="input" name="user.uNo" size="30"
-      data-validate="required:不为空" placeholder="工号"
+     <div class="label"><span class="float-right">销售编号</span> <label>销售编号</label></div>
+     <div class="field"><input type="text" class="input" name="sales.sNo" size="30"
+      data-validate="required:不为空" readonly="readonly" placeholder="销售编号" value="${salesNo}"
      /></div>
    </div>
     <div class="form-group">
-     <div class="label"><span class="float-right">用户名/真实姓名</span> <label>用户名</label></div>
-     <div class="field"><input type="text" class="input" name="user.uName" size="30"
-      data-validate="required:不为空" placeholder="真实姓名"
+     <div class="label"><span class="float-right">请选择商品,双击文本框出现所有商品</span> <label>商品序号</label></div>
+     <div class="field"><input id="goods" type="text" class="input" size="30"
+      name="sales.s_goId" data-validate="required:不为空"
+      placeholder="请输入 商品编号 / 商品类型 / 商品名称 / 商品型号 进行查找 支持模糊查找"
      /></div>
    </div>
     <div class="form-group">
-     <div class="label"><span class="float-right">登陆密码</span> <label>登陆密码</label></div>
-     <div class="field"><input type="text" class="input" name="user.uPwd" size="30"
-      data-validate="required:不为空" placeholder="请输入密码"
+     <div class="label"><span class="float-right">请选择客户,双击文本框出现所有客户</span> <label>客户序号</label></div>
+     <div class="field"><input id="guest" type="text" class="input" size="30"
+      name="sales.s_gId" data-validate="required:不为空"
+      placeholder="请输入 客户编号 / 客户姓名 / 手机号 / 家庭住址 进行查找 支持模糊查找（不可以手动输入）"
      /></div>
    </div>
     <div class="form-group">
-     <div class="label"><span class="float-right">针对某些关键操作所设立的独立密码</span> <label>操作密码</label>
-    </div>
-     <div class="field"><input type="text" class="input" name="user.uDoPwd" size="30"
-      placeholder="请输入操作密码"
+     <div class="label"><span class="float-right">数量</span> <label>数量</label></div>
+     <div class="field"><input type="text" class="input" name="sales.sNum" size="30"
+      placeholder="数量" data-validate="plusinteger:请输入正整数"
      /></div>
    </div>
     <div class="form-group">
-     <div class="label"><span class="float-right">性别</span> <label>性别</label></div>
-     <div class="field"><select class="input" name="user.uSex">
-     <option value="男">男</option>
-      <option value="女">女</option>
-      </select></div>
-   </div>
-    <div class="form-group">
-     <div class="label"><span class="float-right">该用户所属于的部门或者单位</span> <label>所属单位</label></div>
-     <div class="field"><input type="text" class="input" name="user.uCompany" size="30"
-      placeholder="填写单位/部门名称"
+     <div class="label"><span class="float-right">应收金额</span> <label>应收金额</label></div>
+     <div class="field"><input type="text" class="input" name="sales.sReceivable" size="30"
+      placeholder="应收金额" data-validate="currency:请输入正确的货币格式"
      /></div>
    </div>
     <div class="form-group">
-     <div class="label"><span class="float-right">用户所属角色</span> <label>角色选择</label></div>
-     <div class="field"><select class="input" name="user.u_rId">
-       <c:forEach items="${roles}" var="li">
-        <option value="${li.rId}">${li.rName}</option>
+     <div class="label"><span class="float-right">实收金额</span> <label>实收金额</label></div>
+     <div class="field"><input type="text" class="input" name="sales.sReceived" size="30"
+      placeholder="实收金额" data-validate="currency:请输入正确的货币格式"
+     /></div>
+   </div>
+    <div class="form-group">
+     <div class="label"><span class="float-right">销售日期</span> <label>销售日期</label></div>
+     <div class="field"><input type="text" class="input date"  name="sales.sSaledDate"
+      size="30" placeholder="点击选择销售日期"  
+     /></div>
+   </div>
+    <div class="form-group">
+     <div class="label"><span class="float-right">质保截至</span> <label>质保截至</label></div>
+     <div class="field"><input type="text" class="input date" name="sales.sWarrantyDate"
+      size="30" placeholder="质保截至"  
+     /></div>
+   </div>
+    <div class="form-group">
+     <div class="label"><span class="float-right">技术负责人</span> <label>技术负责人</label></div>
+     <div class="field"><input type="text" class="input" name="sales.sTechnologyPerson"
+      size="30" placeholder="技术负责人"
+     /></div>
+   </div>
+    <div class="form-group">
+     <div class="label"><span class="float-right">销售单位</span> <label>销售单位</label></div>
+     <div class="field"><input type="text" class="input" name="sales.sSalesUnit" size="30"
+      placeholder="销售单位"
+     /></div>
+   </div>
+    <div class="form-group">
+     <div class="label"><span class="float-right">销售代表</span> <label>销售代表</label></div>
+     <div class="field"><input type="text" class="input" name="sales.sSalesRepresentative"
+      size="30" placeholder="销售代表"
+     /></div>
+   </div>
+    <div class="form-group">
+     <div class="label"><span class="float-right">购买方式</span> <label>购买方式</label></div>
+     <div class="field"><select name="sales.sPayType" class="input">
+       <c:forEach items="${buyType}" var="li">
+        <option value="${li.vName}">${li.vName}</option>
        </c:forEach>
      </select></div>
-   </div>
-    <div class="form-group">
-     <div class="label"><span class="float-right">与该用户取得联系的方式,座机/手机/QQ</span> <label>联系方式</label>
+     <div class="form-group">
+      <div class="label"><span class="float-right">发票号码</span> <label>发票号码</label></div>
+      <div class="field"><input type="text" class="input" name="sales.sInvoice" size="30"
+       placeholder="发票号码" data-validate="required:不为空"
+      /></div>
     </div>
-     <div class="field"><input type="text" class="input" name="user.uPhone" size="30"
-      placeholder="联系方式" data-validate="required:不为空"
-     /></div>
+     <div class="form-group">
+      <div class="label"><span class="float-right">备注</span> <label>备注</label></div>
+      <div class="field"><input type="text" class="input" name="sales.sRemark" size="30"
+       placeholder="备注"
+      /></div>
+    </div>
    </div>
-    <div class="form-group">
-     <div class="label"><span class="float-right">备注</span> <label>备注</label></div>
-     <div class="field"><input type="text" class="input" name="user.uRemark" size="30"
-      placeholder="备注"
-     /></div>
-   </div>
+    <div class="panel-foot text-center"><input type="submit"
+     class="button bg-main radius-none" value="提交保存"
+    /></div>
   </div>
-   <div class="panel-foot text-center"><input type="submit" class="button bg-main radius-none" value="提交保存" /></div>
  </div>
 </form>
 </body>

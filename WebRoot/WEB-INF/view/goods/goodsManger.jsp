@@ -14,6 +14,20 @@
    onclick="$('#admin').load('goods/goodsManger_add')"
   >添加商品</a></div>
   <div class="panel-body">
+   <div class="panel">
+    <div class="panel-body">
+     <form method="post" class="form-inline" action="goods/goodsManger">
+      <div class="form-group">
+       <div class="label"><label>检索条件&nbsp;&nbsp;</label></div>
+       <div class="field"><input type="text" class="input" name="keyword" size="125"
+        placeholder="支持模糊查找 "
+        value="${keyword}"
+       /></div>
+     </div>
+      <div class="form-button"><button class="button bg-main" type="submit">搜索</button></div>
+    </form>
+   </div>
+  </div>
    <table class="table table-hover">
     <tr>
      <th>商品编号</th>
@@ -49,20 +63,20 @@
     </c:when>
     <c:otherwise>
      <a class="button border-blue button-little"
-      onclick="$('#admin').load('goods/goodsManger?page=${goods.pageNumber-1}')"
+      onclick="$('#admin').load('goods/goodsManger?page=${goods.pageNumber-1}&&keyword=${keyword}')"
      >上一页</a>
     </c:otherwise>
-   </c:choose> 总共${goods.totalRow}条，每页${good.pageSize}条，总共${goods.totalPage}页 ，当前第${goods.pageNumber}页 <c:choose>
+   </c:choose> 总共${goods.totalRow}条，每页${goods.pageSize}条，总共${goods.totalPage}页 ，当前第${goods.pageNumber}页 <c:choose>
     <c:when test="${goods.pageNumber==goods.totalPage}">
      <a class="button border-blue button-little disabled">下一页</a>
     </c:when>
     <c:otherwise>
      <a class="button border-blue button-little"
-      onclick="$('#admin').load('goods/goodsManger?page=${goods.pageNumber+1}')"
+      onclick="$('#admin').load('goods/goodsManger?page=${goods.pageNumber+1}&&keyword=${keyword}')"
      >下一页</a>
     </c:otherwise>
    </c:choose> 跳转到 <select id="jump"
-   onchange="$('#admin').load('goods/goodsManger?page='+this.options[this.options.selectedIndex].text)"
+   onchange="$('#admin').load('goods/goodsManger?page='+this.options[this.options.selectedIndex].text+'&&keyword=${keyword}')"
   >
     <c:forEach begin="1" end="${goods.totalPage}" var="li">
      <c:choose>

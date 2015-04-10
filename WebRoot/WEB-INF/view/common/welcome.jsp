@@ -65,7 +65,7 @@
       <td><a
         href="http://shang.qq.com/wpa/qunwpa?idkey=a08e4d729d15d32cec493212f7672a6a312c7e59884a959c47ae7a846c3fadc1"
         target="_blank"
-       >201916085</a> (点击加入)</td></tr>
+       >201916085</a> (点击加入)<input type="button" onclick="alert('asdf')" /></td></tr>
     </table>
    </div>
   </div>

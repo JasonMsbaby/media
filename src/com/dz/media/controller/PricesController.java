@@ -19,7 +19,9 @@ public class PricesController extends Controller {
 
 	public void pricesManger() {
 		int pageNume = getParaToInt("page") == null ? 1 : getParaToInt("page");
-		setAttr("goods", Goods.me.getAllDistinct(pageNume));
+		String keyword=getPara("keyword")==null?"":getPara("keyword");
+		setAttr("keyword", keyword);
+		setAttr("goods", Goods.me.getAllDistinct(pageNume,keyword));
 		setAttr("prices", Prices.me.getAll());
 	}
 
@@ -37,7 +39,7 @@ public class PricesController extends Controller {
 			redirect("/prices/goodsSearch?key=" + key + "&&page=" + page
 					+ "&&id=" + id);
 		} else {
-			renderText("error");
+			renderText("保存失败");
 		}
 	}
 
@@ -57,7 +59,7 @@ public class PricesController extends Controller {
 		if (prices.save()) {
 			redirect("/prices/pricesManger_edit?id=" + goodsId);
 		} else {
-			renderText("error");
+			renderText("更新失败");
 		}
 	}
 
@@ -69,7 +71,7 @@ public class PricesController extends Controller {
 			if (p.delete()) {
 				redirect("/prices/pricesManger_edit?id=" + goodsId);
 			} else {
-				renderText("error");
+				renderText("删除失败");
 			}
 		}
 	}
@@ -86,7 +88,7 @@ public class PricesController extends Controller {
 		if (Prices.me.deleteByType(getParaToInt("id"))) {
 			redirect("/prices/pricesManger");
 		} else {
-			renderText("error");
+			renderText("删除失败");
 		}
 	}
 
@@ -120,7 +122,7 @@ public class PricesController extends Controller {
 						Prices.me.getByGoodsAndType(getParaToInt("id"), "出售"));
 				render("pricesManger_add.jsp");
 			} else {
-				renderText("error");
+				renderText("删除失败");
 			}
 		}
 		render("pricesManger_add.jsp");

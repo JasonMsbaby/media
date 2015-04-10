@@ -18,7 +18,6 @@
     <tr>
      <th>编号</th>
      <th>变量名称</th>
-     <th>变量类型</th>
      <th>变量值</th>
      <th>备注</th>
      <th>操作</th>
@@ -27,7 +26,6 @@
      <tr>
       <td>${li.vId}</td>
       <td>${li.vName}</td>
-      <td>${li.vType}</td>
       <td><c:forEach items="${vals}" var="li2" varStatus="status">
         <c:if test="${li2.vType==li.vId}">
                     【${li2.vName}】

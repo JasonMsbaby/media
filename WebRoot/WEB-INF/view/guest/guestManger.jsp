@@ -8,9 +8,22 @@
 </head>
 <body>
  <div class="panel">
-  <div class="panel-head icon-bookmark">客户管理 <a id="refresh"onclick="openAdmin('guest/guestManger')"
+  <div class="panel-head icon-bookmark">&nbsp;&nbsp;客户管理 <a id="refresh"onclick="openAdmin('guest/guestManger')"
   >刷新</a> <a style="float: right;" class="button border-blue button-little" onclick="$('#admin').load('guest/guestManger_add')" >添加客户信息</a></div>
   <div class="panel-body">
+  <div class="panel">
+    <div class="panel-body">
+     <form method="post" class="form-inline" action="guest/guestManger">
+      <div class="form-group">
+       <div class="label"><label >检索条件&nbsp;&nbsp;</label></div>
+       <div class="field"><input type="text" class="input" name="keyword"
+        size="125" placeholder="支持模糊查找 " value="${keyword}"
+       /></div>
+     </div>
+      <div class="form-button"><button class="button bg-main" type="submit">搜索</button></div>
+    </form>
+   </div>
+  </div>
    <table class="table table-hover">
     <tr>
      <th>用户编号</th>
@@ -58,16 +71,16 @@
      <a class="button border-blue button-little ">上一页</a>
     </c:when>
     <c:otherwise>
-     <a class="button border-blue button-little" onclick="$('#admin').load('guest/guestManger?page=${guest.pageNumber-1}')" >上一页</a>
+     <a class="button border-blue button-little" onclick="$('#admin').load('guest/guestManger?page=${guest.pageNumber-1}&&keyword=${keyword}')" >上一页</a>
     </c:otherwise>
-   </c:choose> 总共${guest.totalRow}条，每页10条，总共${guest.totalPage}页 ，当前第${guest.pageNumber}页 <c:choose>
+   </c:choose> 总共${guest.totalRow}条，每页${guest.pageSize}条，总共${guest.totalPage}页 ，当前第${guest.pageNumber}页 <c:choose>
     <c:when test="${guest.pageNumber==guest.totalPage}">
      <a class="button border-blue button-little disabled">下一页</a>
     </c:when>
     <c:otherwise>
-     <a class="button border-blue button-little" onclick="$('#admin').load('guest/guestManger?page=${guest.pageNumber+1}')" >下一页</a>
+     <a class="button border-blue button-little" onclick="$('#admin').load('guest/guestManger?page=${guest.pageNumber+1}&&keyword=${keyword}')" >下一页</a>
     </c:otherwise>
-   </c:choose> 跳转到 <select id="jump" onchange="$('#admin').load('guest/guestManger?page='+this.options[this.options.selectedIndex].text)">
+   </c:choose> 跳转到 <select id="jump" onchange="$('#admin').load('guest/guestManger?page='+this.options[this.options.selectedIndex].text)+'&&keyword=${keyword}'">
     <c:forEach begin="1" end="${guest.totalPage}" var="li">
     <c:choose>
     <c:when test="${guest.pageNumber==li}"><option selected="selected">${li}</option></c:when>

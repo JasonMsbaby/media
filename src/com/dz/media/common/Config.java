@@ -4,6 +4,7 @@ import com.dz.media.controller.GoodsController;
 import com.dz.media.controller.GuestController;
 import com.dz.media.controller.IndexController;
 import com.dz.media.controller.PricesController;
+import com.dz.media.controller.SalesController;
 import com.dz.media.controller.SparePartsBase;
 import com.dz.media.controller.SystemController;
 import com.dz.media.model.Action;
@@ -56,6 +57,7 @@ public class Config extends JFinalConfig {
 		me.add("goods",GoodsController.class,"goods");
 		me.add("prices",PricesController.class,"prices");
 		me.add("sparePartsBase",SparePartsBase.class,"sparePartsBase");
+		me.add("sales",SalesController.class,"sales");
 	}
 
 	@Override

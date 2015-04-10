@@ -48,7 +48,7 @@
     <c:otherwise>
      <a class="button border-blue button-little" onclick="$('#admin').load('sys/userManger?page=${users.pageNumber-1}')" >上一页</a>
     </c:otherwise>
-   </c:choose> 总共${users.totalRow}条，每页10条，总共${users.totalPage}页 ，当前第${users.pageNumber}页 <c:choose>
+   </c:choose> 总共${users.totalRow}条，每页${users.pageSize}条，总共${users.totalPage}页 ，当前第${users.pageNumber}页 <c:choose>
     <c:when test="${users.pageNumber==users.totalPage}">
      <a class="button border-blue button-little disabled">下一页</a>
     </c:when>

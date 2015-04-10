@@ -58,13 +58,13 @@ $(function(){
        <c:forEach items="${permissions}" var="li1">
         <c:if test="${li1.aType==0}">
          <li class="icon-folder-open-o">${li1.aName}<a style="margin-left: 10px;"
-          class="icon-minus-square-o nav1"
+          class="icon-minus-square-o nav11"
          ></a>
           <ul>
            <c:forEach items="${permissions}" var="li2">
             <c:if test="${li2.aType==li1.aId}">
              <li class="icon-folder-open-o">${li2.aName}<a style="margin-left: 10px;"
-              class="icon-minus-square-o nav2"
+              class="icon-minus-square-o nav22"
              ></a> <input class="check2-${li2.aId}" value="${li2.aId}" style="float: right;"
               type="checkbox"
              />

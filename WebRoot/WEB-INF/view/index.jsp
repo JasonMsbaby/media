@@ -20,7 +20,7 @@
       <ul><li class="active" onclick="openAdmin('welcome')"><a class="icon-paper-plane-o">
          欢迎页面</a></li></ul></li>
      <c:forEach items="${list}" var="li">
-      <c:if test="${li.aType==0}">
+      <c:if test="${li.aType=='0'}">
        <li class="nav1"><a href="#" class="${li.aIcon}"> ${li.aName}</a>
         <ul>
          <c:forEach items="${list}" var="li2">

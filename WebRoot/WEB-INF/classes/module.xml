@@ -22,27 +22,27 @@
 		</nav2>
 	</nav1>
 	<nav1 aId="nav2" aName="销售管理" aType="0" aRemark="" aAllow=""
-		aLink="welcome" aShow="1" aOrder="2" aIcon="icon-shopping-cart">
+		aLink="" aShow="1" aOrder="2" aIcon="icon-shopping-cart">
 		<nav2 aId="nav2_1" aName="销售信息录入" aType="nav2" aRemark="" aAllow=""
-			aLink="welcome" aShow="1" aOrder="1" aIcon="icon-pencil">
+			aLink="sales/salesManger_add" aShow="1" aOrder="1" aIcon="icon-pencil">
 		</nav2>
 		<nav2 aId="nav2_2" aName="销售信息管理" aType="nav2" aRemark="" aAllow=""
-			aLink="welcome" aShow="1" aOrder="1" aIcon="icon-hdd-o">
+			aLink="sales/salesManger" aShow="1" aOrder="1" aIcon="icon-hdd-o">
 			<nav3 aId="nav2_2_1" aName="查看详情" aType="nav2_2" aRemark=""
-				aAllow="" aLink="welcome" aShow="0" aOrder="4" aIcon="icon-navicon (alias)">
+				aAllow="" aLink="sales/salesManger_detail" aShow="0" aOrder="4" aIcon="icon-navicon (alias)">
 			</nav3>
 			<nav3 aId="nav2_2_2" aName="编辑" aType="nav2_2" aRemark=""
-				aAllow="" aLink="welcome" aShow="0" aOrder="4" aIcon="icon-pencil-square-o">
+				aAllow="" aLink="sales/salesManger_edit" aShow="0" aOrder="4" aIcon="icon-pencil-square-o">
 			</nav3>
 			<nav3 aId="nav2_2_3" aName="删除" aType="nav2_2" aRemark=""
-				aAllow="" aLink="welcome" aShow="0" aOrder="4" aIcon="icon-trash-o">
+				aAllow="" aLink="sales/salesManger_delete" aShow="0" aOrder="4" aIcon="icon-trash-o">
 			</nav3>
 			<nav3 aId="nav2_2_4" aName="导出记录" aType="nav2_2" aRemark=""
-				aAllow="" aLink="welcome" aShow="0" aOrder="4" aIcon="icon-print">
+				aAllow="" aLink="sales/salesManger_export" aShow="0" aOrder="4" aIcon="icon-print">
 			</nav3>
 		</nav2>
 		<nav2 aId="nav2_3" aName="销售信息统计" aType="nav2" aRemark="" aAllow=""
-			aLink="welcome" aShow="1" aOrder="1" aIcon="icon-book">
+			aLink="salesManger" aShow="1" aOrder="1" aIcon="icon-book">
 			<nav3 aId="nav2_3_1" aName="导出报表" aType="nav2_3" aRemark=""
 				aAllow="" aLink="welcome" aShow="0" aOrder="4" aIcon="icon-print">
 			</nav3>

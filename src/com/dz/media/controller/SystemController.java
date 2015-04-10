@@ -29,7 +29,7 @@ public class SystemController extends Controller {
 		if (user.save()) {
 			redirect("/sys/userManger");
 		} else {
-			renderText("error");
+			renderText("保存失败");
 		}
 
 	}
@@ -45,7 +45,7 @@ public class SystemController extends Controller {
 		if (user.update()) {
 			redirect("/sys/userManger");
 		} else {
-			renderText("error");
+			renderText("更新失败");
 		}
 
 	}
@@ -55,7 +55,7 @@ public class SystemController extends Controller {
 		if (user.delete()) {
 			redirect("/sys/userManger");
 		} else {
-			renderText("error");
+			renderText("删除失败");
 		}
 
 	}
@@ -82,10 +82,10 @@ public class SystemController extends Controller {
 			if (ro.save()) {
 				redirect("/sys/roleManger");
 			} else {
-				renderText("error");
+				renderText("保存失败");
 			}
 		} else {
-			renderText("error");
+			renderText("请填写正确的级别保存失败");
 		}
 
 	}
@@ -104,10 +104,10 @@ public class SystemController extends Controller {
 			if (ro.update()) {
 				redirect("/sys/roleManger");
 			} else {
-				renderText("error");
+				renderText("更新失败");
 			}
 		} else {
-			renderText("error");
+			renderText("请填写正确的角色级别");
 		}
 	}
 
@@ -117,7 +117,7 @@ public class SystemController extends Controller {
 		if (role.delete()) {
 			redirect("/sys/roleManger");
 		} else {
-			renderText("error");
+			renderText("删除失败");
 		}
 	}
 
@@ -140,7 +140,7 @@ public class SystemController extends Controller {
 		if (v.save()) {
 			redirect("/sys/valManger_edit?id=" + v.getInt("vType"));
 		} else {
-			renderText("error");
+			renderText("更新失败");
 		}
 	}
 
@@ -150,7 +150,7 @@ public class SystemController extends Controller {
 		if (val.delete()) {
 			redirect("/sys/valManger_edit?id=" + val.getInt("vType"));
 		} else {
-			renderText("error");
+			renderText("删除失败");
 		}
 	}
 }
