@@ -56,7 +56,7 @@ public class Goods extends Model<Goods> {
 				"select *", "FROM goods WHERE goNo LIKE '%" + para
 						+ "%' OR goName LIKE '%" + para
 						+ "%' OR goVersion LIKE '%" + para
-						+ "%' OR goType LIKE '%" + para + "%'");
+						+ "%' OR goType LIKE '%" + para + "%' order by goType asc");
 		return goods;
 	}
 
@@ -64,7 +64,7 @@ public class Goods extends Model<Goods> {
 		List<Goods> goods = find("select * FROM goods WHERE goId like '%"
 				+ para + "%' or  goNo LIKE  '%" + para + "%' OR goName LIKE '%"
 				+ para + "%' OR goVersion LIKE '%" + para
-				+ "%' OR goType LIKE '%" + para + "%'");
+				+ "%' OR goType LIKE '%" + para + "%' order by goType asc");
 		return goods;
 	}
 
@@ -75,6 +75,6 @@ public class Goods extends Model<Goods> {
 						+ "%' or goName like '%" + keyword
 						+ "%' or goVersion like '%" + keyword
 						+ "%' or goFormat like '%" + keyword
-						+ "%' order by goType");
+						+ "%' order by goType asc");
 	}
 }

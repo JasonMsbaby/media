@@ -9,6 +9,7 @@ public class GuestController extends Controller {
 
 	// ************************客户信息录入**********************************************
 	public void guestManger_add() {
+		setAttr("guestNo", Help.getCurrentTime2());
 		render("guestManger_add.jsp");
 	}
 

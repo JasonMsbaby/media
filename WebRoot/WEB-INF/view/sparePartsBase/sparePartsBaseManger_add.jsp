@@ -40,14 +40,6 @@
      </select></div>
    </div>
     <div class="form-group">
-     <div class="label"><span class="float-right">库存量</span> <label>库存量</label>
-    </div>
-     <div class="field"><input type="text" class="input" name="spb.sbNumber" size="30"
-      placeholder="库存量" data-validate="required:不为空"
-     /></div>
-   </div>
-   
-    <div class="form-group">
      <div class="label"><span class="float-right">备注</span> <label>备注</label></div>
      <div class="field"><input type="text" class="input" name="spb.sbRemark" size="30"
       placeholder="备注"

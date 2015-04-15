@@ -311,7 +311,7 @@ $(function() {
      */
     function allow(path) {
 	var flag = false;
-	var str1 = "prices/goodsSearch,sales/salesManger,guest/guestManger,goods/goodsManger,prices/pricesManger,sparePartsBase/sparePartsBaseManger";
+	var str1 = "prices/goodsSearch,sales/salesManger,guest/guestManger,goods/goodsManger,prices/pricesManger,sparePartsBase/sparePartsBaseManger,saled/saledManger,sparePartsInOut/sparePartsInOut_out,sparePartsInOut/sparePartsInOut_find";
 	var str = str1.split(",");
 	for (var t = 0; t < str.length; t++) {
 	    if (str[t] == path) {

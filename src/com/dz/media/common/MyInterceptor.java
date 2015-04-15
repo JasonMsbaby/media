@@ -32,11 +32,17 @@ public class MyInterceptor implements Interceptor {
 					if(actionKey=="/"){//判断是否登陆的是主页
 						ai.invoke();
 					}else{
-						if(currentUser.canVisit(actionKey)||Roles.me.findById(currentUser.get("u_rId")).getInt("rLevel")==0){//判断是否有权限访问
-							ai.invoke();
+						//判断是否是超级管理员
+						if(!(Roles.me.findById(currentUser.get("u_rId")).getInt("rLevel")==0)){
+							if(currentUser.canVisit(actionKey,controller.getSession())){//判断是否有权限访问
+								ai.invoke();
+							}else{
+								controller.renderHtml(Help.getAlert("没有权限"));
+							}
 						}else{
-							controller.renderHtml(Help.getAlert("没有权限"));
+							ai.invoke();
 						}
+						
 					}
 			}else{
 				controller.redirect("/login");

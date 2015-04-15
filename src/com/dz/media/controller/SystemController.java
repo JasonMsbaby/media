@@ -1,5 +1,6 @@
 package com.dz.media.controller;
 
+import com.dz.media.common.DESUtil;
 import com.dz.media.common.Help;
 import com.dz.media.model.Action;
 import com.dz.media.model.Roles;
@@ -26,6 +27,7 @@ public class SystemController extends Controller {
 
 	public void userManger_add_submit() {
 		User user = getModel(User.class, "user");
+		user.set("uPwd", new DESUtil().encryptStr(user.getStr("uPwd")));
 		if (user.save()) {
 			redirect("/sys/userManger");
 		} else {
@@ -35,13 +37,16 @@ public class SystemController extends Controller {
 	}
 
 	public void userManger_edit() {
-		setAttr("user", User.me.findById(getPara("id")));
+		User u=User.me.findById(getPara("id"));
+		u.set("uPwd", new DESUtil().decryptStr(u.getStr("uPwd")));
+		setAttr("user",u);
 		setAttr("roles", Roles.me.getRolesList(getSession()));
 		render("userManger_edit.jsp");
 	}
 
 	public void userManger_edit_submit() {
 		User user = getModel(User.class, "user");
+		user.set("uPwd", new DESUtil().encryptStr(user.getStr("uPwd")));
 		if (user.update()) {
 			redirect("/sys/userManger");
 		} else {
@@ -152,5 +157,17 @@ public class SystemController extends Controller {
 		} else {
 			renderText("删除失败");
 		}
+	}
+	// &*****************************其他设置****************************************************
+	public void otherSetting(){
+		
+	}
+	
+	
+	
+	//**********************************帮助函数*****************************************************
+	public void getUserJson(){
+		String keyword=getPara("keyword")==null?"":getPara("keyword");
+		renderJson(User.me.likeSearch(keyword));
 	}
 }

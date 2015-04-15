@@ -14,7 +14,7 @@
     <div class="form-group">
      <div class="label"><span class="float-right">客户唯一的识别号码，用于登陆的帐号</span> <label>客户编号</label></div>
      <div class="field"><input type="text" class="input" name="guest.gNo" size="30"
-      data-validate="required:不为空" placeholder="客户编号"
+      data-validate="required:不为空" readonly="readonly" placeholder="客户编号" value="${guestNo}"
      /></div>
    </div>
     <div class="form-group">

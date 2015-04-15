@@ -26,7 +26,7 @@ public class Guest extends Model<Guest> {
 		List<Guest> guests = find("select * FROM guest WHERE gId like '%"
 				+ where + "%' or  gNo  LIKE '%" + where + "%' OR gName LIKE '%"
 				+ where + "%' OR gPhone LIKE '%" + where
-				+ "%' OR gAdress LIKE '%" + where + "%'");
+				+ "%' OR gAdress LIKE '%" + where + "%' order by gNo asc");
 		return guests;
 	}
 
@@ -39,6 +39,6 @@ public class Guest extends Model<Guest> {
 						+ "%' or gCompany like '%" + keyword
 						+ "%' or gAdress like '%" + keyword
 						+ "%' or gVIP like '%" + keyword
-						+ "%' or gInputDate like '%" + keyword + "%'");
+						+ "%' or gInputDate like '%" + keyword + "%' order by gNo asc");
 	}
 }

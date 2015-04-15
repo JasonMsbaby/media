@@ -1,5 +1,7 @@
 package com.dz.media.model;
 
+import java.util.List;
+
 import com.dz.media.common.Help;
 import com.jfinal.plugin.activerecord.Model;
 import com.jfinal.plugin.activerecord.Page;
@@ -66,5 +68,21 @@ public class Sale extends Model<Sale> {
 		return findFirst(
 				"SELECT * FROM sale,goods,guest,USER WHERE sId=? AND goods.goId=sale.s_goId AND guest.gId=sale.s_gId AND user.uId=sale.sInputPerson",
 				id);
+	}
+	/**
+	 * 供填写售后记录时调出销售记录模糊查询所用
+	 * @param para
+	 * @return
+	 */
+	public List<Sale> likeSearch(String para) {
+		return find("SELECT * FROM sale,guest,goods WHERE sale.s_goId=goods.goId AND sale.s_gId=guest.gId AND (guest.gPhone LIKE '%"
+				+ para
+				+ "%' OR guest.gSex LIKE '%"
+				+ para
+				+ "%' OR guest.gId LIKE '%"
+				+ para
+				+ "%' OR guest.gName LIKE '%"
+				+ para
+				+ "%' OR goods.goId LIKE '%" + para + "%' )");
 	}
 }

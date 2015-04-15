@@ -2,182 +2,200 @@
 <nav>
 	<nav1 aId="nav1" aName="客户管理" aType="0" aRemark="" aAllow=""
 		aLink="welcome" aShow="1" aOrder="1" aIcon="icon-users">
-		<nav2 aId="nav1_1" aName="客户信息录入" aType="nav1" aRemark="" aAllow=""
+		<nav2 aId="nav1_1" aName="客户信息录入" aType="nav1" aRemark="" aAllow="guest/guestManger_add,guest/guestManger_add_submit"
 			aLink="guest/guestManger_add" aShow="1" aOrder="1" aIcon="icon-pencil">
 		</nav2>
-		<nav2 aId="nav1_2" aName="客户档案管理" aType="nav1" aRemark="" aAllow=""
+		<nav2 aId="nav1_2" aName="客户档案管理" aType="nav1" aRemark="" aAllow="guest/guestManger"
 			aLink="guest/guestManger" aShow="1" aOrder="2" aIcon="icon-hdd-o">
 			<nav3 aId="nav1_2_1" aName="查看详情" aType="nav1_2" aRemark=""
-				aAllow="" aLink="guest/guestManger_detail" aShow="0" aOrder="1" aIcon="icon-navicon (alias)">
+				aAllow="guest/guestManger_detail" aLink="guest/guestManger_detail" aShow="0" aOrder="1"
+				aIcon="icon-navicon (alias)">
 			</nav3>
 			<nav3 aId="nav1_2_2" aName="导出档案" aType="nav1_2" aRemark=""
 				aAllow="" aLink="welcome" aShow="0" aOrder="2" aIcon="icon-print">
 			</nav3>
 			<nav3 aId="nav1_2_3" aName="编辑" aType="nav1_2" aRemark=""
-				aAllow="" aLink="guest/guestManger_edit" aShow="0" aOrder="3" aIcon="icon-pencil-square-o">
+				aAllow="guest/guestManger_edit" aLink="guest/guestManger_edit" aShow="0" aOrder="3"
+				aIcon="icon-pencil-square-o">
 			</nav3>
 			<nav3 aId="nav1_2_4" aName="删除" aType="nav1_2" aRemark=""
-				aAllow="" aLink="guest/guestManger_delete" aShow="0" aOrder="4" aIcon="icon-trash-o">
+				aAllow="guest/guestManger_delete" aLink="guest/guestManger_delete" aShow="0" aOrder="4"
+				aIcon="icon-trash-o">
 			</nav3>
 		</nav2>
 	</nav1>
 	<nav1 aId="nav2" aName="销售管理" aType="0" aRemark="" aAllow=""
 		aLink="" aShow="1" aOrder="2" aIcon="icon-shopping-cart">
-		<nav2 aId="nav2_1" aName="销售信息录入" aType="nav2" aRemark="" aAllow=""
+		<nav2 aId="nav2_1" aName="销售信息录入" aType="nav2" aRemark="" aAllow="sales/salesManger_add,sales/salesManger_add_submit,goods/getGoodsJson,guest/getGuestJson"
 			aLink="sales/salesManger_add" aShow="1" aOrder="1" aIcon="icon-pencil">
 		</nav2>
-		<nav2 aId="nav2_2" aName="销售信息管理" aType="nav2" aRemark="" aAllow=""
+		<nav2 aId="nav2_2" aName="销售信息管理" aType="nav2" aRemark="" aAllow="sales/salesManger"
 			aLink="sales/salesManger" aShow="1" aOrder="1" aIcon="icon-hdd-o">
 			<nav3 aId="nav2_2_1" aName="查看详情" aType="nav2_2" aRemark=""
-				aAllow="" aLink="sales/salesManger_detail" aShow="0" aOrder="4" aIcon="icon-navicon (alias)">
+				aAllow="sales/salesManger_detail" aLink="sales/salesManger_detail" aShow="0" aOrder="4"
+				aIcon="icon-navicon (alias)">
 			</nav3>
 			<nav3 aId="nav2_2_2" aName="编辑" aType="nav2_2" aRemark=""
-				aAllow="" aLink="sales/salesManger_edit" aShow="0" aOrder="4" aIcon="icon-pencil-square-o">
+				aAllow="sales/salesManger_edit,goods/getGoodsJson,guest/getGuestJson,sales/salesManger_edit_submit" aLink="sales/salesManger_edit" aShow="0" aOrder="4"
+				aIcon="icon-pencil-square-o">
 			</nav3>
 			<nav3 aId="nav2_2_3" aName="删除" aType="nav2_2" aRemark=""
-				aAllow="" aLink="sales/salesManger_delete" aShow="0" aOrder="4" aIcon="icon-trash-o">
+				aAllow="sales/salesManger_delete" aLink="sales/salesManger_delete" aShow="0" aOrder="4"
+				aIcon="icon-trash-o">
 			</nav3>
 			<nav3 aId="nav2_2_4" aName="导出记录" aType="nav2_2" aRemark=""
-				aAllow="" aLink="sales/salesManger_export" aShow="0" aOrder="4" aIcon="icon-print">
+				aAllow="" aLink="sales/salesManger_export" aShow="0" aOrder="4"
+				aIcon="icon-print">
 			</nav3>
 		</nav2>
-		<nav2 aId="nav2_3" aName="销售信息统计" aType="nav2" aRemark="" aAllow=""
+		<!-- <nav2 aId="nav2_3" aName="销售信息统计" aType="nav2" aRemark="" aAllow=""
 			aLink="salesManger" aShow="1" aOrder="1" aIcon="icon-book">
 			<nav3 aId="nav2_3_1" aName="导出报表" aType="nav2_3" aRemark=""
 				aAllow="" aLink="welcome" aShow="0" aOrder="4" aIcon="icon-print">
 			</nav3>
-		</nav2>
+		</nav2> -->
 
 	</nav1>
 	<nav1 aId="nav3" aName="售后管理" aType="0" aRemark="" aAllow=""
-		aLink="welcome" aShow="1" aOrder="3" aIcon="icon-fax">
-		<nav2 aId="nav3_1" aName="售后信息录入" aType="nav3" aRemark="" aAllow=""
-			aLink="welcome" aShow="1" aOrder="1" aIcon="icon-pencil">
+		aLink="" aShow="1" aOrder="3" aIcon="icon-fax">
+		<nav2 aId="nav3_1" aName="售后信息录入" aType="nav3" aRemark="" aAllow="saled/saledManger_add,saled/getSalesJson,saled/saledManger_add_submit"
+			aLink="saled/saledManger_add" aShow="1" aOrder="1" aIcon="icon-pencil">
 		</nav2>
-		<nav2 aId="nav3_2" aName="售后信息查询" aType="nav3" aRemark="" aAllow=""
-			aLink="welcome" aShow="1" aOrder="1" aIcon="icon-desktop">
-		</nav2>
-		<nav2 aId="nav3_3" aName="售后信息统计" aType="nav3" aRemark="" aAllow=""
-			aLink="welcome" aShow="1" aOrder="1" aIcon="icon-book">
+		<nav2 aId="nav3_2" aName="售后信息管理" aType="nav3" aRemark="" aAllow="saled/saledManger"
+			aLink="saled/saledManger" aShow="1" aOrder="1" aIcon="icon-book">
+			<nav3 aId="nav3_2_1" aName="查看详情" aType="nav3_2" aRemark=""
+				aAllow="guest/guestManger_detail" aLink="guest/guestManger_detail" aShow="0" aOrder="1"
+				aIcon="icon-navicon (alias)">
+			</nav3>
+			<nav3 aId="nav3_2_3" aName="删除" aType="nav3_2" aRemark=""
+				aAllow="saled/saledManger_delete" aLink="saled/saledManger_delete" aShow="0" aOrder="3"
+				aIcon="icon-pencil-square-o">
+			</nav3>
+			<nav3 aId="nav3_2_4" aName="派工" aType="nav3_2" aRemark=""
+				aAllow="sys/getUserJson,saled/repaire" aLink="saled/repaire" aShow="0" aOrder="4"
+				aIcon="icon-trash-o">
+			</nav3>
 		</nav2>
 	</nav1>
 	<nav1 aId="nav4" aName="审批" aType="0" aRemark="" aAllow="" aLink="welcome"
 		aShow="1" aOrder="4" aIcon="icon-shield">
-		<nav2 aId="nav4_1" aName="待审核" aType="nav4" aRemark="" aAllow=""
-			aLink="welcome" aShow="1" aOrder="1" aIcon="icon-eye">
+		<nav2 aId="nav4_1" aName="待审核" aType="nav4" aRemark="" aAllow="check/waitCheck,check/waitCheck_pass,check/waitCheck_defeat"
+			aLink="check/waitCheck" aShow="1" aOrder="1" aIcon="icon-eye">
 		</nav2>
-		<nav2 aId="nav4_1" aName="审核完成" aType="nav4" aRemark="" aAllow=""
+		<!-- <nav2 aId="nav4_1" aName="审核完成" aType="nav4" aRemark="" aAllow=""
 			aLink="welcome" aShow="1" aOrder="1" aIcon="icon-gavel">
-		</nav2>
+		</nav2> -->
 	</nav1>
 	<nav1 aId="nav5" aName="备件入库出库管理" aType="0" aRemark="" aAllow=""
-		aLink="welcome" aShow="1" aOrder="5" aIcon="icon-truck">
-		<nav2 aId="nav5_1" aName="备件入库" aType="nav5" aRemark="" aAllow=""
-			aLink="welcome" aShow="1" aOrder="1" aIcon="icon-mail-reply (alias)">
+		aLink="" aShow="1" aOrder="5" aIcon="icon-truck">
+		<nav2 aId="nav5_1" aName="备件入库" aType="nav5" aRemark="" aAllow="sparePartsInOut/sparePartsInOut_in,sparePartsBase/getSparePartsJason"
+			aLink="sparePartsInOut/sparePartsInOut_in" aShow="1" aOrder="1" aIcon="icon-mail-reply (alias)">
 		</nav2>
-		<nav2 aId="nav5_2" aName="备件出库" aType="nav5" aRemark="" aAllow=""
-			aLink="welcome" aShow="1" aOrder="1" aIcon="icon-mail-forward (alias)">
+		<nav2 aId="nav5_2" aName="备件出库" aType="nav5" aRemark="" aAllow="sparePartsInOut/sparePartsInOut_out"
+			aLink="sparePartsInOut/sparePartsInOut_out" aShow="1" aOrder="1" aIcon="icon-mail-forward (alias)">
 		</nav2>
-		<nav2 aId="nav5_3" aName="备件查询" aType="nav5" aRemark="" aAllow=""
-			aLink="welcome" aShow="1" aOrder="1" aIcon="icon-desktop">
-		</nav2>
-		<nav2 aId="nav5_4" aName="领取记录" aType="nav5" aRemark="" aAllow=""
-			aLink="welcome" aShow="1" aOrder="1" aIcon="icon-list-alt">
-		</nav2>
-		<nav2 aId="nav5_5" aName="报废管理" aType="nav5" aRemark="" aAllow=""
-			aLink="welcome" aShow="1" aOrder="1" aIcon="icon-exclamation-circle">
-			<nav3 aId="nav5_5_1" aName="转为报废" aType="nav5_5" aRemark=""
-				aAllow="" aLink="welcome" aShow="0" aOrder="4" aIcon="icon-retweet">
-			</nav3>
-			<nav3 aId="nav5_5_2" aName="查看详情" aType="nav5_5" aRemark=""
-				aAllow="" aLink="welcome" aShow="0" aOrder="4" aIcon="icon-navicon (alias)">
-			</nav3>
-			<nav3 aId="nav5_5_3" aName="查看记录" aType="nav5_5" aRemark=""
-				aAllow="" aLink="welcome" aShow="0" aOrder="4" aIcon="icon-desktop">
-			</nav3>
+		<nav2 aId="nav5_3" aName="备件查询" aType="nav5" aRemark="" aAllow="sparePartsInOut/sparePartsInOut_find"
+			aLink="sparePartsInOut/sparePartsInOut_find" aShow="1" aOrder="1" aIcon="icon-desktop">
 		</nav2>
 	</nav1>
 	<nav1 aId="nav6" aName="内容管理" aType="0" aRemark="" aAllow=""
 		aLink="welcome" aShow="1" aOrder="6" aIcon="icon-bar-chart-o">
 		<nav2 aId="nav6_1" aName="商品基本信息管理" aType="nav6" aRemark=""
-			aAllow="" aLink="goods/goodsManger" aShow="1" aOrder="1" aIcon="icon-cubes">
+			aAllow="goods/goodsManger" aLink="goods/goodsManger" aShow="1" aOrder="1" aIcon="icon-cubes">
 			<nav3 aId="nav6_1_1" aName="查看详情" aType="nav6_1" aRemark=""
-				aAllow="" aLink="goods/goodsManger_detail" aShow="0" aOrder="4" aIcon="icon-navicon (alias)">
+				aAllow="goods/goodsManger_detail" aLink="goods/goodsManger_detail" aShow="0" aOrder="4"
+				aIcon="icon-navicon (alias)">
 			</nav3>
 			<nav3 aId="nav6_1_2" aName="新增商品" aType="nav6_1" aRemark=""
-				aAllow="" aLink="goods/goodsManger_add" aShow="0" aOrder="4" aIcon="icon-pencil">
+				aAllow="goods/goodsManger_add,goods/goodsManger_add_submit" aLink="goods/goodsManger_add" aShow="0" aOrder="4"
+				aIcon="icon-pencil">
 			</nav3>
 			<nav3 aId="nav6_1_3" aName="编辑" aType="nav6_1" aRemark=""
-				aAllow="" aLink="goods/goodsManger_edit" aShow="0" aOrder="4" aIcon="icon-pencil-square-o">
+				aAllow="goods/goodsManger_edit,goods/goodsManger_edit_submit" aLink="goods/goodsManger_edit" aShow="0" aOrder="4"
+				aIcon="icon-pencil-square-o">
 			</nav3>
 			<nav3 aId="nav6_1_4" aName="删除" aType="nav6_1" aRemark=""
-				aAllow="" aLink="goods/goodsManger_delete" aShow="0" aOrder="4" aIcon="icon-trash-o">
+				aAllow="goods/goodsManger_delete" aLink="goods/goodsManger_delete" aShow="0" aOrder="4"
+				aIcon="icon-trash-o">
 			</nav3>
 		</nav2>
-		<nav2 aId="nav6_2" aName="价目管理" aType="nav6" aRemark="" aAllow=""
+		<nav2 aId="nav6_2" aName="价目管理" aType="nav6" aRemark="" aAllow="prices/pricesManger"
 			aLink="prices/pricesManger" aShow="1" aOrder="1" aIcon="icon-cny (alias)">
 			<nav3 aId="nav6_2_1" aName="新增价目" aType="nav6_2" aRemark=""
-				aAllow="" aLink="prices/pricesManger_add" aShow="0" aOrder="4" aIcon="icon-pencil">
+				aAllow="prices/pricesManger_add,prices/goodsSearch,prices/pricesManger_add_submit" aLink="prices/pricesManger_add" aShow="0" aOrder="4"
+				aIcon="icon-pencil">
 			</nav3>
 			<nav3 aId="nav6_2_2" aName="编辑" aType="nav6_2" aRemark=""
-				aAllow="" aLink="prices/pricesManger_edit" aShow="0" aOrder="4" aIcon="icon-pencil-square-o">
+				aAllow="prices/pricesManger_edit,prices/pricesManger_edit_delete,prices/pricesManger_edit_submit" aLink="prices/pricesManger_edit" aShow="0" aOrder="4"
+				aIcon="icon-pencil-square-o">
 			</nav3>
 			<nav3 aId="nav6_2_3" aName="删除" aType="nav6_2" aRemark=""
-				aAllow="" aLink="prices/pricesManger_delete" aShow="0" aOrder="4" aIcon="icon-trash-o">
+				aAllow="prices/pricesManger_delete" aLink="prices/pricesManger_delete" aShow="0" aOrder="4"
+				aIcon="icon-trash-o">
 			</nav3>
 			<nav3 aId="nav6_2_4" aName="导出价格表" aType="nav6_2" aRemark=""
 				aAllow="" aLink="welcome" aShow="0" aOrder="4" aIcon="icon-trash-o">
 			</nav3>
 		</nav2>
 		<nav2 aId="nav6_3" aName="维修备件信息管理" aType="nav6" aRemark=""
-			aAllow="" aLink="sparePartsBase/sparePartsBaseManger" aShow="1" aOrder="1" aIcon="icon-suitcase">
+			aAllow="sparePartsBase/sparePartsBaseManger" aLink="sparePartsBase/sparePartsBaseManger" aShow="1"
+			aOrder="1" aIcon="icon-suitcase">
 			<nav3 aId="nav6_3_1" aName="新增备件" aType="nav6_3" aRemark=""
-				aAllow="" aLink="sparePartsBase/sparePartsBaseManger_add" aShow="0" aOrder="4" aIcon="icon-pencil">
+				aAllow="sparePartsBase/sparePartsBaseManger_add" aLink="sparePartsBase/sparePartsBaseManger_add" aShow="0"
+				aOrder="4" aIcon="icon-pencil">
 			</nav3>
 			<nav3 aId="nav6_3_1" aName="编辑" aType="nav6_3" aRemark=""
-				aAllow="" aLink="sparePartsBase/sparePartsBaseManger_edit" aShow="0" aOrder="4" aIcon="icon-pencil-square-o">
+				aAllow="sparePartsBase/sparePartsBaseManger_edit,sparePartsBase/sparePartsBaseManger_edit_submit" aLink="sparePartsBase/sparePartsBaseManger_edit" aShow="0"
+				aOrder="4" aIcon="icon-pencil-square-o">
 			</nav3>
 			<nav3 aId="nav6_3_1" aName="删除" aType="nav6_3" aRemark=""
-				aAllow="" aLink="sparePartsBase/sparePartsBaseManger_delete" aShow="0" aOrder="4" aIcon="icon-trash-o">
+				aAllow="sparePartsBase/sparePartsBaseManger_delete" aLink="sparePartsBase/sparePartsBaseManger_delete" aShow="0"
+				aOrder="4" aIcon="icon-trash-o">
 			</nav3>
 		</nav2>
 	</nav1>
 	<nav1 aId="nav7" aName="系统设置" aType="0" aRemark="" aAllow=""
 		aLink="welcome" aShow="1" aOrder="7" aIcon="icon-gears (alias)">
-		<nav2 aId="nav7_1" aName="用户管理" aType="nav7" aRemark=""
-			aAllow="" aLink="sys/userManger" aShow="1" aOrder="1" aIcon="icon-user">
+		<nav2 aId="nav7_1" aName="用户管理" aType="nav7" aRemark="" aAllow="sys/userManger"
+			aLink="sys/userManger" aShow="1" aOrder="1" aIcon="icon-user">
 			<nav3 aId="nav7_1_1" aName="新增用户" aType="nav7_1" aRemark=""
-				aAllow="" aLink="welcome" aShow="0" aOrder="4" aIcon="icon-pencil">
+				aAllow="sys/userManger_add" aLink="sys/userManger_add" aShow="0" aOrder="4" aIcon="icon-pencil">
 			</nav3>
 			<nav3 aId="nav7_1_2" aName="编辑" aType="nav7_1" aRemark=""
-				aAllow="" aLink="welcome" aShow="0" aOrder="4" aIcon="icon-pencil-square-o">
+				aAllow="sys/userManger_edit,sys/userManger_edit_submit" aLink="sys/userManger_edit" aShow="0" aOrder="4" aIcon="icon-pencil-square-o">
 			</nav3>
 			<nav3 aId="nav7_1_3" aName="删除" aType="nav7_1" aRemark=""
-				aAllow="" aLink="welcome" aShow="0" aOrder="4" aIcon="icon-trash-o">
+				aAllow="sys/userManger_delete" aLink="sys/userManger_delete" aShow="0" aOrder="4" aIcon="icon-trash-o">
 			</nav3>
 		</nav2>
-		<nav2 aId="nav7_2" aName="角色管理" aType="nav7" aRemark=""
-			aAllow="" aLink="sys/roleManger" aShow="1" aOrder="1" aIcon="icon-tags">
+		<nav2 aId="nav7_2" aName="角色管理" aType="nav7" aRemark="" aAllow="sys/roleManger"
+			aLink="sys/roleManger" aShow="1" aOrder="1" aIcon="icon-tags">
 			<nav3 aId="nav7_2_1" aName="新增角色" aType="nav7_2" aRemark=""
-				aAllow="" aLink="welcome" aShow="0" aOrder="4" aIcon="icon-pencil">
+				aAllow="sys/roleManger_add,sys/roleManger_add_submit" aLink="sys/roleManger_add" aShow="0" aOrder="4" aIcon="icon-pencil">
 			</nav3>
 			<nav3 aId="nav7_2_2" aName="编辑" aType="nav7_2" aRemark=""
-				aAllow="" aLink="welcome" aShow="0" aOrder="4" aIcon="icon-pencil-square-o">
+				aAllow="sys/roleManger_edit,sys/roleManger_edit_submit" aLink="sys/roleManger_edit" aShow="0" aOrder="4" aIcon="icon-pencil-square-o">
 			</nav3>
 			<nav3 aId="nav7_2_3" aName="删除" aType="nav7_2" aRemark=""
-				aAllow="" aLink="welcome" aShow="0" aOrder="4" aIcon="icon-trash-o">
+				aAllow="sys/roleManger" aLink="sys/roleManger" aShow="0" aOrder="4" aIcon="icon-trash-o">
 			</nav3>
 		</nav2>
-		<nav2 aId="nav7_3" aName="变量设置" aType="nav7" aRemark=""
-			aAllow="" aLink="sys/valManger" aShow="1" aOrder="1" aIcon="icon-cog">
-			<!-- <nav3 aId="nav7_3_1" aName="新增变量" aType="nav7_3" aRemark=""
-				aAllow="" aLink="welcome" aShow="0" aOrder="4" aIcon="icon-pencil">
-			</nav3> -->
+		<nav2 aId="nav7_3" aName="变量设置" aType="nav7" aRemark="" aAllow="sys/valManger"
+			aLink="sys/valManger" aShow="1" aOrder="1" aIcon="icon-cog">
 			<nav3 aId="nav7_3_1" aName="编辑" aType="nav7_3" aRemark=""
-				aAllow="" aLink="sys/valManger_edit" aShow="0" aOrder="4" aIcon="icon-pencil-square-o">
+				aAllow="sys/valManger_edit,sys/valManger_delete,sys/valManger_edit_submit" aLink="sys/valManger_edit" aShow="0" aOrder="4"
+				aIcon="icon-pencil-square-o">
 			</nav3>
-			<nav3 aId="nav7_3_2" aName="删除" aType="nav7_3" aRemark=""
-				aAllow="" aLink="sys/valManger_delete" aShow="0" aOrder="4" aIcon="icon-trash-o">
+		</nav2>
+		<nav2 aId="nav7_4" aName="其他设置" aType="nav7" aRemark="" aAllow="sys/otherSetting"
+			aLink="sys/otherSetting" aShow="1" aOrder="1" aIcon="icon-cog">
+			<nav3 aId="nav7_4_1" aName="更换logo" aType="nav7_4" aRemark=""
+				aAllow="sys/otherSetting_changeLogo" aLink="sys/otherSetting_changeLogo" aShow="0" aOrder="4"
+				aIcon="icon-pencil-square-o">
+			</nav3>
+			<nav3 aId="nav7_4_1" aName="编辑" aType="nav7_4" aRemark=""
+				aAllow="sys/valManger_edit,sys/valManger_delete,sys/valManger_edit_submit" aLink="sys/valManger_edit" aShow="0" aOrder="4"
+				aIcon="icon-pencil-square-o">
 			</nav3>
 		</nav2>
 	</nav1>

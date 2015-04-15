@@ -25,4 +25,11 @@ public class Sparepartsbase extends Model<Sparepartsbase> {
 						+ "%' or sbNumber like '%" + keyword
 						+ "%' or sbFormat like '%" + keyword + "%'");
 	}
+
+	public List<Sparepartsbase> likeSearch(String keyword) {
+		return find("select * from sparepartsbase where sbNo like '%" + keyword
+				+ "%' or sbType like '%" + keyword + "%' or sbName like '%"
+				+ keyword + "%'");
+	}
+
 }

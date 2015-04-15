@@ -1,12 +1,15 @@
 package com.dz.media.common;
 
+import com.dz.media.controller.CheckController;
 import com.dz.media.controller.GoodsController;
 import com.dz.media.controller.GuestController;
 import com.dz.media.controller.IndexController;
 import com.dz.media.controller.PricesController;
+import com.dz.media.controller.SaledController;
 import com.dz.media.controller.SalesController;
 import com.dz.media.controller.SparePartsBase;
 import com.dz.media.controller.SystemController;
+import com.dz.media.controller.sparePartsInOutController;
 import com.dz.media.model.Action;
 import com.dz.media.model.Goods;
 import com.dz.media.model.Guest;
@@ -58,6 +61,9 @@ public class Config extends JFinalConfig {
 		me.add("prices",PricesController.class,"prices");
 		me.add("sparePartsBase",SparePartsBase.class,"sparePartsBase");
 		me.add("sales",SalesController.class,"sales");
+		me.add("saled",SaledController.class,"saled");
+		me.add("sparePartsInOut",sparePartsInOutController.class,"sparePartsInOut");
+		me.add("check",CheckController.class,"check");
 	}
 
 	@Override
